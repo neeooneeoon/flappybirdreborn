@@ -1,0 +1,22 @@
+#ifndef BASE_H
+#define BASE_H
+
+#include "sdl_engine.h"
+
+using namespace std;
+
+class Base{
+public:
+    SDL_Rect rect1;
+    SDL_Rect rect2;
+
+    void init(SDL_Renderer* renderer);
+    void display(SDL_Renderer* renderer);
+    void destroy();
+private:
+    char* path = "sprites\\base.png";
+    SDL_Surface* surface = NULL;
+    SDL_Texture* texture = NULL;
+};
+
+#endif // BASE_H
