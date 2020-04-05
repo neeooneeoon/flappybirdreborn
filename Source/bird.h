@@ -16,12 +16,11 @@ public:
     void status(bool &close, SDL_Rect &baseRect1, SDL_Rect &baseRect2);
     void destroy();
 private:
-    char* pathUp = "sprites\\yellowbird-upflap.png";
-    char* pathMid = "sprites\\yellowbird-midflap.png";
-    char* pathDown = "sprites\\yellowbird-downflap.png";
+    char* path = "sprites\\yellowbird.png";
     SDL_Texture *texture = NULL;
     SDL_Surface *surface = NULL;
-    SDL_Rect rect;
+    SDL_Rect srcrect;
+    SDL_Rect dstrect;
     int speed = 500;
     int velocity = 0;
     double angle = 0;
