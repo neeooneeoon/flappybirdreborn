@@ -10,19 +10,20 @@ using namespace std;
 class Bird
 {
 public:
+    SDL_Rect dstrect;
+
     void select();
     void init(SDL_Renderer* renderer);
-    void draw(SDL_Renderer* renderer);
+    void display(SDL_Renderer* renderer);
     void update();
     void keyUpdate();
-    void status(bool &close, SDL_Rect &baseRect1, SDL_Rect &baseRect2);
+    void status(bool &close);
     void destroy();
 private:
     char* path = "sprites\\yellowBird.png";
     SDL_Texture *texture = NULL;
     SDL_Surface *surface = NULL;
     SDL_Rect srcrect;
-    SDL_Rect dstrect;
     int speed = 500;
     int velocity = 0;
     int delay = 0;

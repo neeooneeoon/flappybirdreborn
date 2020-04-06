@@ -45,6 +45,8 @@
 		<Unit filename="flappy_bird.cpp" />
 		<Unit filename="flappy_bird.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="pipe.cpp" />
+		<Unit filename="pipe.h" />
 		<Unit filename="sdl_engine.cpp" />
 		<Unit filename="sdl_engine.h" />
 		<Extensions>

@@ -12,14 +12,8 @@ void Background::select(){
 void Background::init(SDL_Renderer* renderer){
     select();
     loadSprites(surface, texture, renderer, path);
-    rect1.x = 0;
-    rect1.y = -120;
-    rect1.w = 1280;
-    rect1.h = 720;
-    rect2.x = 1280;
-    rect2.y = -120;
-    rect2.w = 1280;
-    rect2.h = 720;
+    rect1 = {0,-120,1280,720};
+    rect2 = {1280, -120, 1280, 720};
 }
 
 void Background::display(SDL_Renderer* renderer, int multiplier){

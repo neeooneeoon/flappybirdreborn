@@ -4,14 +4,8 @@ using namespace std;
 
 void Base::init(SDL_Renderer* renderer){
     loadSprites(surface, texture, renderer, path);
-    rect1.x = 0;
-    rect1.y = 590;
-    rect1.w = 1280;
-    rect1.h = 130;
-    rect2.x = 1280;
-    rect2.y = 590;
-    rect2.w = 1280;
-    rect2.h = 130;
+    rect1 = {0,590,1280,130};
+    rect2 = {1280,590,1280,130};
 }
 
 void Base::display(SDL_Renderer* renderer, int multiplier){

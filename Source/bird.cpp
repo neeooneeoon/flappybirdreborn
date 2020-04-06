@@ -21,12 +21,12 @@ void Bird::init(SDL_Renderer* renderer)
     dstrect = {(1280 - dstrect.w) /2, (720 - dstrect.h) /2, 34*2, 24*2};
 }
 
-void Bird::draw(SDL_Renderer* renderer)
+void Bird::display(SDL_Renderer* renderer)
 {
     SDL_RenderCopyEx(renderer, texture, &srcrect, &dstrect, angle, center, flip);
 }
 
-void Bird::status(bool &close, SDL_Rect &baseRect1, SDL_Rect &baseRect2)
+void Bird::status(bool &close)
 {
     if(hold>0)
     {
@@ -35,16 +35,6 @@ void Bird::status(bool &close, SDL_Rect &baseRect1, SDL_Rect &baseRect2)
     if(angle<90 && hold ==0)
     {
         angle+=7;
-    }
-
-    if(collisionCheck(dstrect, baseRect1))
-    {
-        close = true;
-    }
-
-    if(collisionCheck(dstrect, baseRect2))
-    {
-        close = true;
     }
 
     // bottom boundary check
