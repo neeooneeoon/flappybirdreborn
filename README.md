@@ -12,6 +12,11 @@ Flappy Bird Reborn is a rendition of Flappy Bird - 2014's Mobile Game Hit. It's 
 
 TBA...
 
+## Known Bugs:
+
+- [Ongoing] The game is capped at 60fps.
+- ...
+
 ## Credits
 - Developer: Ngoc Nguyen
 - SDL2.0's code template from Tran Thi Minh Chau's lecture
