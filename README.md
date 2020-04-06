@@ -10,12 +10,16 @@ Flappy Bird Reborn is a rendition of Flappy Bird - 2014's Mobile Game Hit. It's 
 
 Written in [SDL2](https://www.libsdl.org/) & C++ 
 
-## Roadmap
+## Gameplay
 
-Beta: 12/4/2020
-
-Final Release: TBA
+TBA...
 
 ## Disclaimer
 
 Flappy Bird Reborn used resources(sprites, sounds, etc...) from many sources. All rights belong to their respective owners
+
+## Credits
+- Developer: Ngoc Nguyen
+- Libraries used in the project: SDL2.0, SDL2_image
+- SDL2.0's code template from Tran Thi Minh Chau's lecture
+
