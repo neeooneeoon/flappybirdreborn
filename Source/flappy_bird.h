@@ -32,6 +32,8 @@ private:
     Bird bird;
     Background background;
     Base base;
+
+    Config config;
 };
 
 #endif // FLAPPY_BIRD_H

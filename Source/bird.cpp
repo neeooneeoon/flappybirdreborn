@@ -2,9 +2,17 @@
 
 using namespace std;
 
+void Bird::select(){
+    srand(time(NULL));
+    int selection = rand() %3 +1;
+    if(selection ==1) path = "sprites\\redBird.png";
+    else if(selection == 2) path = "sprites\\yellowBird.png";
+    else if(selection == 3) path = "sprites\\blueBird.png";
+}
+
 void Bird::init(SDL_Renderer* renderer)
 {
-
+    select();
     loadSprites(surface, texture, renderer, path);
     SDL_QueryTexture(texture, NULL, NULL, &dstrect.w, &dstrect.h);
     srcrect = {0,25,34,24};
@@ -29,11 +37,13 @@ void Bird::status(bool &close, SDL_Rect &baseRect1, SDL_Rect &baseRect2)
         angle+=7;
     }
 
-    if(collisionCheck(dstrect, baseRect1)){
+    if(collisionCheck(dstrect, baseRect1))
+    {
         close = true;
     }
 
-    if(collisionCheck(dstrect, baseRect2)){
+    if(collisionCheck(dstrect, baseRect2))
+    {
         close = true;
     }
 
@@ -58,6 +68,35 @@ void Bird::update()
 {
     dstrect.y += (speed+velocity) / 200;
     velocity += 9.8*5;
+
+    delay++;
+    if(delay == 15)
+    {
+        if(flapStatus==1)
+        {
+            srcrect = {0,25,34,24};
+            flapStatus = 2;
+        }
+        else if(flapStatus ==2 && flapReversed==true)
+        {
+            srcrect = {35,0,34,24};
+            flapStatus = 1;
+            flapReversed = false;
+        }
+        else if(flapStatus == 2 && flapReversed==false)
+        {
+            srcrect = {0,0,34,24};
+            flapStatus = 3;
+            flapReversed = true;
+        }
+        else if(flapStatus ==3)
+        {
+            srcrect = {0,25,34,24};
+            flapStatus = 2;
+            flapReversed = true;
+        }
+        delay = 0;
+    }
 }
 
 void Bird::keyUpdate()

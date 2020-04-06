@@ -129,27 +129,31 @@
 1586090369 c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\base.h
 	"sdl_engine.h"
 
-1586090746 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\background.cpp
+1586149842 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\background.cpp
 	"background.h"
 
-1586091638 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\background.h
+1586149902 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\background.h
 	"sdl_engine.h"
+	"config.h"
+	<stdlib.h>
+	<time.h>
 
 1586088490 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sdl_engine.h
 	<iostream>
 	<SDL.h>
 	<SDL_image.h>
 
-1586090760 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\base.cpp
+1586146959 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\base.cpp
 	"base.h"
 
-1586090369 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\base.h
+1586144137 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\base.h
 	"sdl_engine.h"
+	"config.h"
 
-1586091215 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.cpp
+1586144239 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.cpp
 	"flappy_bird.h"
 
-1586087384 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.h
+1586144221 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.h
 	<SDL_image.h>
 	<SDL.h>
 	<string>
@@ -158,12 +162,19 @@
 	"background.h"
 	"base.h"
 
-1586107918 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.h
+1586149893 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.h
 	"sdl_engine.h"
+	<stdlib.h>
+	<time.h>
 
 1586078909 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\main.cpp
 	"flappy_bird.h"
 
 1586088474 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sdl_engine.cpp
 	"sdl_engine.h"
+
+1586149730 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.cpp
+	"bird.h"
+
+1586146922 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\config.h
 

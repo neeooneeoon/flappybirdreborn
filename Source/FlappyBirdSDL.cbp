@@ -41,6 +41,7 @@
 		<Unit filename="base.h" />
 		<Unit filename="bird.cpp" />
 		<Unit filename="bird.h" />
+		<Unit filename="config.h" />
 		<Unit filename="flappy_bird.cpp" />
 		<Unit filename="flappy_bird.h" />
 		<Unit filename="main.cpp" />

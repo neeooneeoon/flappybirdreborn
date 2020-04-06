@@ -2,6 +2,7 @@
 #define BASE_H
 
 #include "sdl_engine.h"
+#include "config.h"
 
 using namespace std;
 
@@ -11,7 +12,7 @@ public:
     SDL_Rect rect2;
 
     void init(SDL_Renderer* renderer);
-    void display(SDL_Renderer* renderer);
+    void display(SDL_Renderer* renderer, int multiplier);
     void destroy();
 private:
     char* path = "sprites\\base.png";

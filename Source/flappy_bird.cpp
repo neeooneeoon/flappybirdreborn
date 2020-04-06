@@ -61,8 +61,8 @@ void FlappyBird::update(double delta_time, bool &close)
 void FlappyBird::display()
 {
     SDL_RenderClear(renderer);
-    background.display(renderer);
-    base.display(renderer);
+    background.display(renderer, config.multiplier);
+    base.display(renderer, config.multiplier);
     bird.draw(renderer);
     SDL_RenderPresent(renderer);
 }
