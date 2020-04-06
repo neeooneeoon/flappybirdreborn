@@ -14,8 +14,8 @@ TBA...
 
 ## Credits
 - Developer: Ngoc Nguyen
-- Libraries used in the project: [SDL2.0]((https://www.libsdl.org/)), [SDL2_image](https://www.libsdl.org/projects/SDL_image/)
 - SDL2.0's code template from Tran Thi Minh Chau's lecture
+- Libraries used in the project: [SDL2.0]((https://www.libsdl.org/)), [SDL2_image](https://www.libsdl.org/projects/SDL_image/)
 - Sprites & Resources pulled from sourabhv's [FlapPyBird](https://github.com/sourabhv/FlapPyBird)
 - Spritesheets created using [SpriteSheetPacker](https://github.com/nickgravelyn/SpriteSheetPacker) & Photoshop
 
