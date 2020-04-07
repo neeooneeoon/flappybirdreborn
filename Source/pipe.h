@@ -2,6 +2,8 @@
 #define PIPE_H
 
 #include "sdl_engine.h"
+#include <stdlib.h>
+#include <time.h>
 
 using namespace std;
 
@@ -9,7 +11,7 @@ class Pipe{
 public:
     SDL_Rect dstrectUp;
     SDL_Rect dstrectDown;
-
+    void getRandomLength();
     void init(SDL_Renderer* renderer);
     void display(SDL_Renderer* renderer, int multiplier);
     void destroy();
@@ -20,7 +22,7 @@ private:
     SDL_Surface* surface;
     SDL_Rect srcrectUp;
     SDL_Rect srcrectDown;
-    int length = 200; //max 320
+    int length = 20; //max 320
     int upAngle = 180;
     SDL_Point* center = NULL;
     SDL_RendererFlip flip = SDL_FLIP_NONE;

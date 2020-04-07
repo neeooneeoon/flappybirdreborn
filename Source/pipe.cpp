@@ -2,6 +2,11 @@
 
 using namespace std;
 
+void Pipe::getRandomLength(){
+    srand(time(NULL));
+    length = 20;
+}
+
 void Pipe::init(SDL_Renderer* renderer){
     loadSprites(surface, texture, renderer, greenPath);
     srcrectDown = {0,0,52,length};
