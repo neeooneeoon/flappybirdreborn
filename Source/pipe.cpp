@@ -11,8 +11,8 @@ void Pipe::init(SDL_Renderer* renderer, int pos){
     getRandomLength();
     srcrectDown = {0,0,52,length};
     dstrectDown = {1280+pos, 590-length, 52, length};
-    srcrectUp = {0,0, 52, 600-length-140};
-    dstrectUp = {1280+pos, 0, 52, 600-length-140};
+    srcrectUp = {0,0, 52, 600-length-170};
+    dstrectUp = {1280+pos, 0, 52, 600-length-170};
 }
 
 void Pipe::display(SDL_Renderer* renderer, int multiplier){

@@ -24,7 +24,7 @@ private:
     SDL_Texture *texture = NULL;
     SDL_Surface *surface = NULL;
     SDL_Rect srcrect;
-    double sizeMultiplier = 1.5;
+    double sizeMultiplier = 1.2;
     int speed = 500;
     int velocity = 0;
     int delay = 0;

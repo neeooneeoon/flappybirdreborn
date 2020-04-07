@@ -48,6 +48,7 @@ void FlappyBird::quit()
     bird.destroy();
     background.destroy();
     base.destroy();
+    pipeDestroy();
     quitSDL(window, renderer);
 }
 
@@ -80,7 +81,6 @@ void FlappyBird::pipeInit(){
     for(int i=0; i<6; i++){
         pipe[i].init(renderer, i*250);
     }
-
 }
 
 void FlappyBird::pipeGen(){
@@ -88,6 +88,14 @@ void FlappyBird::pipeGen(){
         if(pipe[i].dstrectDown.x<-60){
             pipe[i].destroy();
             pipe[i].init(renderer, 150);
+        }
+        if(collisionCheck(bird.dstrect, pipe[i].dstrectUp)
+           || collisionCheck(bird.dstrect, pipe[i].dstrectDown)){
+                close = true;
+           }
+        if(bird.dstrect.x == pipe[i].dstrectUp.x){
+            score++;
+            cout << "Score: " << score << endl;
         }
         pipe[i].display(renderer, config.multiplier);
     }
