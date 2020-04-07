@@ -22,6 +22,8 @@ public:
     void init();
     void quit();
     void collision();
+    void pipeInit();
+    void pipeGen();
 private:
     bool close = false;
 
@@ -38,7 +40,9 @@ private:
     Base base;
 
     Config config;
-    Pipe pipe;
+
+    bool pipeStatus[5];
+    Pipe pipe[5];
 };
 
 #endif // FLAPPY_BIRD_H

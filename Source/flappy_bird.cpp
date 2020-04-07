@@ -4,10 +4,9 @@ using namespace std;
 
 void FlappyBird::game_loop()
 {
-    bool keyCheck = false;
+    //bool keyCheck = false;
     while(!close)
     {
-        collision();
         while(SDL_PollEvent(&event))
         {
             switch(event.type)
@@ -15,7 +14,6 @@ void FlappyBird::game_loop()
             case SDL_QUIT:
                 close = true;
                 break;
-
             case SDL_KEYDOWN:
                 switch(event.key.keysym.scancode)
                 {
@@ -29,6 +27,7 @@ void FlappyBird::game_loop()
                 }
             }
         }
+        collision();
         update(1280/60, close);
         display();
     }
@@ -41,7 +40,7 @@ void FlappyBird::init()
     bird.init(renderer);
     background.init(renderer);
     base.init(renderer);
-    pipe.init(renderer);
+    pipeInit();
 }
 
 void FlappyBird::quit()
@@ -49,7 +48,6 @@ void FlappyBird::quit()
     bird.destroy();
     background.destroy();
     base.destroy();
-    pipe.destroy();
     quitSDL(window, renderer);
 }
 
@@ -65,17 +63,30 @@ void FlappyBird::display()
     SDL_RenderClear(renderer);
     background.display(renderer, config.multiplier);
     base.display(renderer, config.multiplier);
-    pipe.display(renderer, config.multiplier);
+    pipeGen();
     bird.display(renderer);
     SDL_RenderPresent(renderer);
 }
 
 void FlappyBird::collision(){
     if(collisionCheck(bird.dstrect, base.rect1)
-       || collisionCheck(bird.dstrect, base.rect2)
-       || collisionCheck(bird.dstrect, pipe.dstrectUp)
-       || collisionCheck(bird.dstrect, pipe.dstrectDown))
+       || collisionCheck(bird.dstrect, base.rect2))
     {
         close = true;
     }
+}
+
+void FlappyBird::pipeInit(){
+    for(int i=0; i<4; i++){
+        pipeStatus[i] = true;
+        pipe[i].init(renderer, i*250);
+    }
+
+}
+
+void FlappyBird::pipeGen(){
+    for(int i=0; i<4; i++){
+        pipe[i].display(renderer, config.multiplier);
+    }
+
 }

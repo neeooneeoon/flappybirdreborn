@@ -12,7 +12,7 @@ public:
     SDL_Rect dstrectUp;
     SDL_Rect dstrectDown;
     void getRandomLength();
-    void init(SDL_Renderer* renderer);
+    void init(SDL_Renderer* renderer, int pos);
     void display(SDL_Renderer* renderer, int multiplier);
     void destroy();
 private:
@@ -22,7 +22,7 @@ private:
     SDL_Surface* surface;
     SDL_Rect srcrectUp;
     SDL_Rect srcrectDown;
-    int length = 20; //max 320
+    int length = 50; //max 320
     int upAngle = 180;
     SDL_Point* center = NULL;
     SDL_RendererFlip flip = SDL_FLIP_NONE;

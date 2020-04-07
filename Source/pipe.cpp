@@ -4,15 +4,17 @@ using namespace std;
 
 void Pipe::getRandomLength(){
     srand(time(NULL));
-    length = 20;
+    length = rand() %280+30;
 }
 
-void Pipe::init(SDL_Renderer* renderer){
+void Pipe::init(SDL_Renderer* renderer, int pos){
     loadSprites(surface, texture, renderer, greenPath);
+    srand(time(NULL));
+    getRandomLength();
     srcrectDown = {0,0,52,length};
-    dstrectDown = {1280, 590-length, 52, length};
-    srcrectUp = {0,0, 52, length};
-    dstrectUp = {1280, 0, 52, length};
+    dstrectDown = {1280+pos, 590-length, 52, length};
+    srcrectUp = {0,0, 52, 600-length-140};
+    dstrectUp = {1280+pos, 0, 52, 600-length-140};
 }
 
 void Pipe::display(SDL_Renderer* renderer, int multiplier){
