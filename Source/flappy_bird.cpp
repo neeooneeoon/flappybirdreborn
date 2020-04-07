@@ -77,16 +77,24 @@ void FlappyBird::collision(){
 }
 
 void FlappyBird::pipeInit(){
-    for(int i=0; i<4; i++){
-        pipeStatus[i] = true;
+    for(int i=0; i<6; i++){
         pipe[i].init(renderer, i*250);
     }
 
 }
 
 void FlappyBird::pipeGen(){
-    for(int i=0; i<4; i++){
+    for(int i=0; i<6; i++){
+        if(pipe[i].dstrectDown.x<-60){
+            pipe[i].destroy();
+            pipe[i].init(renderer, 150);
+        }
         pipe[i].display(renderer, config.multiplier);
     }
+}
 
+void FlappyBird::pipeDestroy(){
+    for(int i=0; i<6; i++){
+        pipe[i].destroy();
+    }
 }

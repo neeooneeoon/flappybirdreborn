@@ -150,10 +150,10 @@
 	"sdl_engine.h"
 	"config.h"
 
-1586261596 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.cpp
+1586268654 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.cpp
 	"flappy_bird.h"
 
-1586259481 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.h
+1586262874 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.h
 	<SDL_image.h>
 	<SDL.h>
 	<string>
@@ -163,7 +163,7 @@
 	"base.h"
 	"pipe.h"
 
-1586164489 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.h
+1586262543 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.h
 	"sdl_engine.h"
 	<stdlib.h>
 	<time.h>
@@ -174,12 +174,12 @@
 1586088474 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sdl_engine.cpp
 	"sdl_engine.h"
 
-1586164372 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.cpp
+1586262539 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.cpp
 	"bird.h"
 
 1586161907 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\config.h
 
-1586261615 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\pipe.cpp
+1586261788 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\pipe.cpp
 	"pipe.h"
 
 1586259603 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\pipe.h

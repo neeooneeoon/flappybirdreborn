@@ -16,8 +16,8 @@ void Bird::init(SDL_Renderer* renderer)
     loadSprites(surface, texture, renderer, path);
     SDL_QueryTexture(texture, NULL, NULL, &dstrect.w, &dstrect.h);
     srcrect = {0,25,34,24};
-    dstrect.w = 34*2;
-    dstrect.h = 24*2;
+    dstrect.w = 34*sizeMultiplier;
+    dstrect.h = 24*sizeMultiplier;
     dstrect = {(1280 - dstrect.w) /2, (720 - dstrect.h) /2, 34*2, 24*2};
 }
 

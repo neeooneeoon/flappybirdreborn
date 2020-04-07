@@ -3,13 +3,11 @@
 using namespace std;
 
 void Pipe::getRandomLength(){
-    srand(time(NULL));
     length = rand() %280+30;
 }
 
 void Pipe::init(SDL_Renderer* renderer, int pos){
     loadSprites(surface, texture, renderer, greenPath);
-    srand(time(NULL));
     getRandomLength();
     srcrectDown = {0,0,52,length};
     dstrectDown = {1280+pos, 590-length, 52, length};
