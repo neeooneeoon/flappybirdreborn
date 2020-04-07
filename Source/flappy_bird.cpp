@@ -80,6 +80,7 @@ void FlappyBird::collision(){
 void FlappyBird::pipeInit(){
     for(int i=0; i<6; i++){
         pipe[i].init(renderer, i*250);
+        scoreStatus[i]=false;
     }
 }
 
@@ -88,13 +89,15 @@ void FlappyBird::pipeGen(){
         if(pipe[i].dstrectDown.x<-60){
             pipe[i].destroy();
             pipe[i].init(renderer, 150);
+            scoreStatus[i] = false;
         }
         if(collisionCheck(bird.dstrect, pipe[i].dstrectUp)
            || collisionCheck(bird.dstrect, pipe[i].dstrectDown)){
                 close = true;
            }
-        if(bird.dstrect.x == pipe[i].dstrectUp.x){
+        if(bird.dstrect.x > pipe[i].dstrectUp.x && scoreStatus[i]==false){
             score++;
+            scoreStatus[i] = true;
             cout << "Score: " << score << endl;
         }
         pipe[i].display(renderer, config.multiplier);

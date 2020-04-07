@@ -43,6 +43,7 @@ private:
     Config config;
 
     Pipe pipe[6];
+    bool scoreStatus[6];
 
     int score = 0;
 };
