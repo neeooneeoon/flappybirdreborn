@@ -17,6 +17,7 @@ void initSDL(SDL_Window* &window, SDL_Renderer* &renderer, const int &SCREEN_WID
 {
     SDL_Init(SDL_INIT_VIDEO);
     IMG_Init(IMG_INIT_PNG);
+    TTF_Init();
 
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
         logSDLError(std::cout, "SDL_Init", true);
@@ -61,6 +62,7 @@ void quitSDL(SDL_Window* &window, SDL_Renderer* &renderer)
     SDL_DestroyWindow(window);
     IMG_Quit();
     SDL_Quit();
+    TTF_Quit();
 }
 
 void destroyObject(SDL_Surface *surface, SDL_Texture *texture)

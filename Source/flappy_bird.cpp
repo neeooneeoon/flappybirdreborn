@@ -40,6 +40,8 @@ void FlappyBird::init()
     bird.init(renderer);
     background.init(renderer);
     base.init(renderer);
+    scoreboard.init(renderer);
+    scoreboard.update(0);
     pipeInit();
 }
 
@@ -49,6 +51,7 @@ void FlappyBird::quit()
     background.destroy();
     base.destroy();
     pipeDestroy();
+    scoreboard.destroy();
     quitSDL(window, renderer);
 }
 
@@ -66,6 +69,7 @@ void FlappyBird::display()
     base.display(renderer, config.multiplier);
     pipeGen();
     bird.display(renderer);
+    scoreboard.display(renderer);
     SDL_RenderPresent(renderer);
 }
 
@@ -98,6 +102,7 @@ void FlappyBird::pipeGen(){
         if(bird.dstrect.x > pipe[i].dstrectUp.x && scoreStatus[i]==false){
             score++;
             scoreStatus[i] = true;
+            scoreboard.update(score);
             cout << "Score: " << score << endl;
         }
         pipe[i].display(renderer, config.multiplier);

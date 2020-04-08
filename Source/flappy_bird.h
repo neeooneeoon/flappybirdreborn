@@ -10,6 +10,7 @@
 #include "background.h"
 #include "base.h"
 #include "pipe.h"
+#include "scoreboard.h"
 
 using namespace std;
 
@@ -30,7 +31,7 @@ private:
 
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    string WINDOW_TITLE = "Flappy Bird SDL - Build 070420";
+    string WINDOW_TITLE = "Flappy Bird SDL - Build 080420";
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -45,6 +46,7 @@ private:
     Pipe pipe[6];
     bool scoreStatus[6];
 
+    Scoreboard scoreboard;
     int score = 0;
 };
 
