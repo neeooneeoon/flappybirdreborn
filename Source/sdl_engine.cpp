@@ -19,6 +19,19 @@ void initSDL(SDL_Window* &window, SDL_Renderer* &renderer, const int &SCREEN_WID
     IMG_Init(IMG_INIT_PNG);
     TTF_Init();
 
+    //Initialize PNG loading
+    int imgFlags = IMG_INIT_PNG;
+    if( !( IMG_Init( imgFlags ) & imgFlags ) )
+    {
+        printf( "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError() );
+    }
+
+    //Initialize SDL_mixer
+    if( Mix_OpenAudio( 44100, MIX_DEFAULT_FORMAT, 2, 2048 ) < 0 )
+    {
+        printf( "SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError() );
+    }
+
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
         logSDLError(std::cout, "SDL_Init", true);
 
@@ -71,7 +84,8 @@ void destroyObject(SDL_Surface *surface, SDL_Texture *texture)
     SDL_DestroyTexture(texture);
 }
 
-bool collisionCheck(SDL_Rect &rect1, SDL_Rect &rect2){
+bool collisionCheck(SDL_Rect &rect1, SDL_Rect &rect2)
+{
     return SDL_HasIntersection(&rect1, &rect2);
 }
 

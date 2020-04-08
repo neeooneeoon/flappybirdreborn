@@ -21,6 +21,7 @@ void FlappyBird::game_loop()
                 case SDL_SCANCODE_UP:
                 case SDL_SCANCODE_SPACE:
                     bird.keyUpdate();
+                    sfx.playWing();
                     break;
                 default:
                     break;
@@ -42,6 +43,7 @@ void FlappyBird::init()
     base.init(renderer);
     scoreboard.init(renderer);
     scoreboard.update(0);
+    sfx.init();
     pipeInit();
 }
 
@@ -52,6 +54,7 @@ void FlappyBird::quit()
     base.destroy();
     pipeDestroy();
     scoreboard.destroy();
+    sfx.close();
     quitSDL(window, renderer);
 }
 
@@ -100,10 +103,11 @@ void FlappyBird::pipeGen(){
                 close = true;
            }
         if(bird.dstrect.x > pipe[i].dstrectUp.x && scoreStatus[i]==false){
+            sfx.playPoint();
             score++;
             scoreStatus[i] = true;
             scoreboard.update(score);
-            cout << "Score: " << score << endl;
+            //cout << "Score: " << score << endl;
         }
         pipe[i].display(renderer, config.multiplier);
     }

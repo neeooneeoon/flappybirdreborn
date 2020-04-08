@@ -11,6 +11,7 @@
 #include "base.h"
 #include "pipe.h"
 #include "scoreboard.h"
+#include "sfx.h"
 
 using namespace std;
 
@@ -40,6 +41,7 @@ private:
     Bird bird;
     Background background;
     Base base;
+    SFX sfx;
 
     Config config;
 

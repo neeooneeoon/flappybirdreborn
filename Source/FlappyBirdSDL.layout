@@ -2,44 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="scoreboard.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="146" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="sdl_engine.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2056" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="scoreboard.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="249" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="pipe.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="273" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="pipe.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="scoreboard.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="107" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="base.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="267" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="flappy_bird.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1596" topLine="67" />
-		</Cursor>
-	</File>
-	<File name="background.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="358" topLine="0" />
+			<Cursor1 position="581" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="background.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -47,9 +17,19 @@
 			<Cursor1 position="454" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="flappy_bird.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="background.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="670" topLine="7" />
+			<Cursor1 position="358" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="backup.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="924" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="base.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="267" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="base.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -57,24 +37,9 @@
 			<Cursor1 position="202" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="170" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="bird.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="486" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="sdl_engine.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="111" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="backup.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="924" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="bird.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -85,6 +50,41 @@
 	<File name="config.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="84" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="sdl_engine.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2056" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="flappy_bird.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2111" topLine="69" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="170" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="sdl_engine.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="133" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="scoreboard.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="931" topLine="31" />
+		</Cursor>
+	</File>
+	<File name="flappy_bird.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="670" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="pipe.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="107" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
