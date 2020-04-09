@@ -51,6 +51,8 @@
 		<Unit filename="scoreboard.h" />
 		<Unit filename="sdl_engine.cpp" />
 		<Unit filename="sdl_engine.h" />
+		<Unit filename="sfx.cpp" />
+		<Unit filename="sfx.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

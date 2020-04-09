@@ -5,14 +5,14 @@ using namespace std;
 void FlappyBird::game_loop()
 {
     //bool keyCheck = false;
-    while(!close)
+    while(!lose)
     {
         while(SDL_PollEvent(&event))
         {
             switch(event.type)
             {
             case SDL_QUIT:
-                close = true;
+                lose = true;
                 break;
             case SDL_KEYDOWN:
                 switch(event.key.keysym.scancode)
@@ -28,8 +28,20 @@ void FlappyBird::game_loop()
                 }
             }
         }
+        nextLevel();
         collision();
-        update(1280/60, close);
+        update(1280/60, lose);
+        display();
+    }
+    game_over();
+}
+
+void FlappyBird::game_over(){
+    config.multiplier = 0;
+    sfx.playHit();
+    sfx.playDie();
+    while(bird.dstrect.y<1000){
+        update(1280/60, lose);
         display();
     }
 }
@@ -61,7 +73,7 @@ void FlappyBird::quit()
 void FlappyBird::update(double delta_time, bool &close)
 {
     bird.update();
-    bird.status(close);
+    bird.status(lose);
     SDL_Delay(delta_time);
 }
 
@@ -80,7 +92,7 @@ void FlappyBird::collision(){
     if(collisionCheck(bird.dstrect, base.rect1)
        || collisionCheck(bird.dstrect, base.rect2))
     {
-        close = true;
+        lose = true;
     }
 }
 
@@ -100,14 +112,13 @@ void FlappyBird::pipeGen(){
         }
         if(collisionCheck(bird.dstrect, pipe[i].dstrectUp)
            || collisionCheck(bird.dstrect, pipe[i].dstrectDown)){
-                close = true;
+                lose = true;
            }
         if(bird.dstrect.x > pipe[i].dstrectUp.x && scoreStatus[i]==false){
             sfx.playPoint();
             score++;
             scoreStatus[i] = true;
             scoreboard.update(score);
-            //cout << "Score: " << score << endl;
         }
         pipe[i].display(renderer, config.multiplier);
     }
@@ -116,5 +127,11 @@ void FlappyBird::pipeGen(){
 void FlappyBird::pipeDestroy(){
     for(int i=0; i<6; i++){
         pipe[i].destroy();
+    }
+}
+
+void FlappyBird::nextLevel(){
+    if(score==20){
+        config.multiplier = 2;
     }
 }

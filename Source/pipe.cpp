@@ -19,8 +19,8 @@ void Pipe::display(SDL_Renderer* renderer, int multiplier){
     SDL_RenderCopy(renderer, texture, &srcrectDown, &dstrectDown);
     SDL_RenderCopyEx(renderer, texture, &srcrectUp, &dstrectUp,
                      upAngle, center, flip);
-    dstrectDown.x -= 6 * multiplier;
-    dstrectUp.x -= 6 * multiplier;
+    dstrectDown.x -= 4 * multiplier;
+    dstrectUp.x -= 4 * multiplier;
 }
 
 void Pipe::destroy(){

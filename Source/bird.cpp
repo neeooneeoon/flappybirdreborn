@@ -38,14 +38,14 @@ void Bird::status(bool &close)
     }
 
     // bottom boundary check
-    if (dstrect.y + dstrect.h > 720)
+    if (dstrect.y + dstrect.h > 720 && close ==false)
     {
         dstrect.y = 720 - dstrect.h;
         close = true;
     }
 
     // upper boundary check
-    if (dstrect.y < 0)
+    if (dstrect.y < 0 && close==false)
     {
         dstrect.y = 0;
         close = true;

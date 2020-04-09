@@ -19,6 +19,7 @@ class FlappyBird
 {
 public:
     void game_loop();
+    void game_over();
     void update(double delta_time, bool &close);
     void display();
     void init();
@@ -27,8 +28,9 @@ public:
     void pipeInit();
     void pipeGen();
     void pipeDestroy();
+    void nextLevel();
 private:
-    bool close = false;
+    bool lose = false;
 
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
@@ -50,6 +52,7 @@ private:
 
     Scoreboard scoreboard;
     int score = 0;
+    int highscore = 0;
 };
 
 #endif // FLAPPY_BIRD_H
