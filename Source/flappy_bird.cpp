@@ -40,9 +40,18 @@ void FlappyBird::game_over(){
     config.multiplier = 0;
     sfx.playHit();
     sfx.playDie();
+    flash.display(renderer);
     while(bird.dstrect.y<1000){
         update(1280/60, lose);
-        display();
+        SDL_RenderClear(renderer);
+        background.display(renderer, config.multiplier);
+        base.display(renderer, config.multiplier);
+        pipeGen();
+        bird.display(renderer);
+        scoreboard.display(renderer);
+        if(flash.alpha>0) flash.alpha-=10;
+        flash.displayAlphaNone(renderer);
+        SDL_RenderPresent(renderer);
     }
 }
 
@@ -57,6 +66,7 @@ void FlappyBird::init()
     scoreboard.update(0);
     sfx.init();
     pipeInit();
+    flash.init(renderer);
 }
 
 void FlappyBird::quit()
@@ -67,6 +77,7 @@ void FlappyBird::quit()
     pipeDestroy();
     scoreboard.destroy();
     sfx.close();
+    flash.destroy();
     quitSDL(window, renderer);
 }
 

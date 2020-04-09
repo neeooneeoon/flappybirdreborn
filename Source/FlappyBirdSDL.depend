@@ -138,7 +138,7 @@
 	<stdlib.h>
 	<time.h>
 
-1586417756 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sdl_engine.h
+1586450935 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sdl_engine.h
 	<iostream>
 	<SDL.h>
 	<SDL_image.h>
@@ -152,10 +152,10 @@
 	"sdl_engine.h"
 	"config.h"
 
-1586443781 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.cpp
+1586453999 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.cpp
 	"flappy_bird.h"
 
-1586447933 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.h
+1586450942 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.h
 	<SDL_image.h>
 	<SDL.h>
 	<string>
@@ -166,6 +166,7 @@
 	"pipe.h"
 	"scoreboard.h"
 	"sfx.h"
+	"flash.h"
 
 1586417756 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.h
 	"sdl_engine.h"
@@ -175,7 +176,7 @@
 1586438542 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\main.cpp
 	"flappy_bird.h"
 
-1586417756 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sdl_engine.cpp
+1586450660 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sdl_engine.cpp
 	"sdl_engine.h"
 
 1586438664 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.cpp
@@ -208,9 +209,9 @@
 1586442687 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\white.h
 	"sdl_engine.h"
 
-1586443135 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flash.h
+1586453341 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flash.h
 	"sdl_engine.h"
 
-1586446172 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flash.cpp
+1586453415 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flash.cpp
 	"flash.h"
 

@@ -15,7 +15,6 @@ void setDefaultBGColor(SDL_Renderer* renderer);
 void loadSprites(SDL_Surface* &surface, SDL_Texture* &texture, SDL_Renderer* &renderer, char* path);
 void quitSDL(SDL_Window* &window, SDL_Renderer* &renderer);
 void destroyObject(SDL_Surface *surface, SDL_Texture *texture);
-
 bool collisionCheck(SDL_Rect &rect1, SDL_Rect &rect2);
 
 #endif

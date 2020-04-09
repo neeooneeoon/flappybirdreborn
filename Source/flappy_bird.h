@@ -12,6 +12,7 @@
 #include "pipe.h"
 #include "scoreboard.h"
 #include "sfx.h"
+#include "flash.h"
 
 using namespace std;
 
@@ -44,6 +45,7 @@ private:
     Background background;
     Base base;
     SFX sfx;
+    Flash flash;
 
     Config config;
 

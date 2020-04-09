@@ -44,6 +44,8 @@
 		<Unit filename="config.h" />
 		<Unit filename="flappy_bird.cpp" />
 		<Unit filename="flappy_bird.h" />
+		<Unit filename="flash.cpp" />
+		<Unit filename="flash.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="pipe.cpp" />
 		<Unit filename="pipe.h" />
