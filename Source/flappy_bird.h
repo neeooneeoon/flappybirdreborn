@@ -32,7 +32,7 @@ private:
 
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    string WINDOW_TITLE = "Flappy Bird SDL - Build 080420";
+    string WINDOW_TITLE = "Flappy Bird SDL - Build 090420";
 
     SDL_Window* window;
     SDL_Renderer* renderer;
