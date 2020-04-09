@@ -6,7 +6,7 @@ Flappy Bird Reborn là game có lối chơi dựa theo game mobile Flappy Bird n
 
 Flappy Bird Reborn is a rendition of Flappy Bird - 2014's Mobile Game Hit. It's your favorite mobile game now on PC with more customization, challenges & fun!
 
-![Flappy Bird Reborn Alpha](https://github.com/neeooneeoon/flappybirdreborn/blob/master/Other/fpp_gif-min.gif)
+![Image Of Flappy Bird Reborn Alpha](https://github.com/neeooneeoon/flappybirdreborn/raw/master/Other/fppbeta.png)
 
 ## Gameplay
 
