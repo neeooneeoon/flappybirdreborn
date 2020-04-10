@@ -108,7 +108,10 @@ void FlappyBird::collision(){
 }
 
 void FlappyBird::pipeInit(){
+    randNum = rand() % 2;
     for(int i=0; i<6; i++){
+        if(randNum == 0) pipe[i].loadGreen(renderer);
+        else pipe[i].loadRed(renderer);
         pipe[i].init(renderer, i*250);
         scoreStatus[i]=false;
     }
@@ -119,6 +122,8 @@ void FlappyBird::pipeGen(){
         if(pipe[i].dstrectDown.x<-60){
             pipe[i].destroy();
             pipe[i].init(renderer, 150);
+            if(randNum == 0) pipe[i].loadGreen(renderer);
+            else pipe[i].loadRed(renderer);
             scoreStatus[i] = false;
         }
         if(collisionCheck(bird.dstrect, pipe[i].dstrectUp)

@@ -6,8 +6,15 @@ void Pipe::getRandomLength(){
     length = rand() %280+30;
 }
 
-void Pipe::init(SDL_Renderer* renderer, int pos){
+void Pipe::loadGreen(SDL_Renderer* renderer){
     loadSprites(surface, texture, renderer, greenPath);
+}
+
+void Pipe::loadRed(SDL_Renderer* renderer){
+    loadSprites(surface, texture, renderer, redPath);
+}
+
+void Pipe::init(SDL_Renderer* renderer, int pos){
     getRandomLength();
     srcrectDown = {0,0,52,length};
     dstrectDown = {1280+pos, 590-length, 52, length};

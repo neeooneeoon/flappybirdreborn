@@ -11,11 +11,14 @@ class Pipe{
 public:
     SDL_Rect dstrectUp;
     SDL_Rect dstrectDown;
+    void loadGreen(SDL_Renderer* renderer);
+    void loadRed(SDL_Renderer* renderer);
     void getRandomLength();
     void init(SDL_Renderer* renderer, int pos);
     void display(SDL_Renderer* renderer, int multiplier);
     void destroy();
 private:
+    int randNum;
     char* greenPath = "sprites\\greenPipe.png";
     char* redPath = "sprites\\redPipe.png";
     SDL_Texture* texture;
