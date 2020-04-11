@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FlappyBirdSDL" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/FlappyBirdSDL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/FlappyBirdSDL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="background.cpp" />
+		<Unit filename="background.h" />
+		<Unit filename="backup.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="base.cpp" />
+		<Unit filename="base.h" />
+		<Unit filename="bird.cpp" />
+		<Unit filename="bird.h" />
+		<Unit filename="config.h" />
+		<Unit filename="flappy_bird.cpp" />
+		<Unit filename="flappy_bird.h" />
+		<Unit filename="flash.cpp" />
+		<Unit filename="flash.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="pipe.cpp" />
+		<Unit filename="pipe.h" />
+		<Unit filename="scoreboard.cpp" />
+		<Unit filename="scoreboard.h" />
+		<Unit filename="sdl_engine.cpp" />
+		<Unit filename="sdl_engine.h" />
+		<Unit filename="sfx.cpp" />
+		<Unit filename="sfx.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

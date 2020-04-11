@@ -1,0 +1,300 @@
+# depslib dependency file v1.0
+1585128135 source:c:\flappybirdsdl\main.cpp
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1585761234 source:c:\flappybirdsdl_cb\main.cpp
+	"flappy_bird.h"
+
+1585817665 c:\flappybirdsdl_cb\sdl_control.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1585818029 source:c:\flappybirdsdl_cb\sdl_control.cpp
+	"sdl_control.h"
+	<SDL_image.h>
+	<SDL.h>
+
+1585817964 source:c:\flappybirdsdl_cb\bird.cpp
+	"sdl_control.h"
+	"bird.h"
+	<SDL.h>
+	<SDL_image.h>
+
+1585817416 c:\flappybirdsdl_cb\flappy_bird.h
+	<SDL_image.h>
+	<SDL.h>
+	<string>
+	"bird.h"
+
+1585817971 source:c:\flappybirdsdl_cb\flappy_bird.cpp
+	"flappy_bird.h"
+	"sdl_control.h"
+	"bird.h"
+
+1585817985 c:\flappybirdsdl_cb\bird.h
+	<SDL.h>
+
+1586091061 source:c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\bird.cpp
+	"bird.h"
+
+1585967288 c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\sdl_control.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1586093327 c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\bird.h
+	"sdl_engine.h"
+
+1586091215 source:c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\flappy_bird.cpp
+	"flappy_bird.h"
+
+1586087384 c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\flappy_bird.h
+	<SDL_image.h>
+	<SDL.h>
+	<string>
+	"sdl_engine.h"
+	"bird.h"
+	"background.h"
+	"base.h"
+
+1586078909 source:c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\main.cpp
+	"flappy_bird.h"
+
+1585965698 source:c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\sdl_control.cpp
+	"sdl_control.h"
+	<SDL_image.h>
+	<SDL.h>
+
+1586088490 c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\sdl_engine.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1586088474 source:c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\sdl_engine.cpp
+	"sdl_engine.h"
+
+1586062485 source:c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\background.cpp
+	"background.h"
+
+1586059736 c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\background.h
+	"sdl_engine.h"
+
+1586060466 c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\sdl_engine.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1586062526 source:c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\bird.cpp
+	"bird.h"
+
+1586062518 c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\bird.h
+	"sdl_engine.h"
+
+1586062564 source:c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\flappy_bird.cpp
+	"flappy_bird.h"
+
+1586062834 c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\flappy_bird.h
+	<SDL_image.h>
+	<SDL.h>
+	<string>
+	"sdl_engine.h"
+	"bird.h"
+	"background.h"
+	"base.h"
+
+1586057653 source:c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\main.cpp
+	"flappy_bird.h"
+
+1586062539 source:c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\sdl_engine.cpp
+	"sdl_engine.h"
+
+1586062437 c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\base.h
+	"sdl_engine.h"
+
+1586062475 source:c:\users\duyng\onedrive\desktop\advprogramming\projects\flappybirdsdl\base.cpp
+	"base.h"
+
+1586090746 source:c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\background.cpp
+	"background.h"
+
+1586091638 c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\background.h
+	"sdl_engine.h"
+
+1586090760 source:c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\base.cpp
+	"base.h"
+
+1586090369 c:\users\ngoc nguyen\desktop\advprogramming\projects\flappybirdsdl\base.h
+	"sdl_engine.h"
+
+1586418792 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\background.cpp
+	"background.h"
+
+1586417756 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\background.h
+	"sdl_engine.h"
+	"config.h"
+	<stdlib.h>
+	<time.h>
+
+1586450935 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sdl_engine.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_TTF.h>
+	<SDL_mixer.h>
+
+1586418799 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\base.cpp
+	"base.h"
+
+1586417756 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\base.h
+	"sdl_engine.h"
+	"config.h"
+
+1586535689 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.cpp
+	"flappy_bird.h"
+
+1586523652 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flappy_bird.h
+	<SDL_image.h>
+	<SDL.h>
+	<string>
+	"sdl_engine.h"
+	"bird.h"
+	"background.h"
+	"base.h"
+	"pipe.h"
+	"scoreboard.h"
+	"sfx.h"
+	"flash.h"
+
+1586417756 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.h
+	"sdl_engine.h"
+	<stdlib.h>
+	<time.h>
+
+1586438542 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\main.cpp
+	"flappy_bird.h"
+
+1586450660 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sdl_engine.cpp
+	"sdl_engine.h"
+
+1586438664 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\bird.cpp
+	"bird.h"
+
+1586418592 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\config.h
+
+1586523780 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\pipe.cpp
+	"pipe.h"
+
+1586523684 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\pipe.h
+	"sdl_engine.h"
+	<stdlib.h>
+	<time.h>
+
+1586417756 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\scoreboard.cpp
+	"scoreboard.h"
+
+1586417756 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\scoreboard.h
+	"sdl_engine.h"
+	<sstream>
+	<string>
+
+1586417756 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sfx.cpp
+	"sfx.h"
+
+1586417756 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\sfx.h
+	"sdl_engine.h"
+
+1586442687 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\white.h
+	"sdl_engine.h"
+
+1586453341 c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flash.h
+	"sdl_engine.h"
+
+1586453415 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\source\flash.cpp
+	"flash.h"
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\background.cpp
+	"background.h"
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\background.h
+	"sdl_engine.h"
+	"config.h"
+	<stdlib.h>
+	<time.h>
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\sdl_engine.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_TTF.h>
+	<SDL_mixer.h>
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\config.h
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\base.cpp
+	"base.h"
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\base.h
+	"sdl_engine.h"
+	"config.h"
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\bird.cpp
+	"bird.h"
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\bird.h
+	"sdl_engine.h"
+	<stdlib.h>
+	<time.h>
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
+	"flappy_bird.h"
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
+	<SDL_image.h>
+	<SDL.h>
+	<string>
+	"sdl_engine.h"
+	"bird.h"
+	"background.h"
+	"base.h"
+	"pipe.h"
+	"scoreboard.h"
+	"sfx.h"
+	"flash.h"
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.h
+	"sdl_engine.h"
+	<stdlib.h>
+	<time.h>
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\scoreboard.h
+	"sdl_engine.h"
+	<sstream>
+	<string>
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\sfx.h
+	"sdl_engine.h"
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\flash.h
+	"sdl_engine.h"
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flash.cpp
+	"flash.h"
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\main.cpp
+	"flappy_bird.h"
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.cpp
+	"pipe.h"
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\scoreboard.cpp
+	"scoreboard.h"
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\sdl_engine.cpp
+	"sdl_engine.h"
+
+1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\sfx.cpp
+	"sfx.h"
+
