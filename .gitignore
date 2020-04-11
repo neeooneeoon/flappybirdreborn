@@ -1,6 +1,7 @@
 /bin
 /obj
 /Debug
+/other
 /.vs
 *.dll
 *.o
