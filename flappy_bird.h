@@ -13,18 +13,19 @@
 #include "scoreboard.h"
 #include "sfx.h"
 #include "flash.h"
+#include "menu.h"
 
 using namespace std;
 
 class FlappyBird
 {
 public:
+    void init();
+    void quit();
     void game_loop();
     void game_over();
     void update(double delta_time, bool &close);
     void display();
-    void init();
-    void quit();
     void collision();
     void pipeInit();
     void pipeGen();

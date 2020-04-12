@@ -248,10 +248,10 @@
 	<stdlib.h>
 	<time.h>
 
-1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
+1586703042 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
-1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
+1586703486 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
 	<SDL_image.h>
 	<SDL.h>
 	<string>
@@ -263,6 +263,7 @@
 	"scoreboard.h"
 	"sfx.h"
 	"flash.h"
+	"menu.h"
 
 1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.h
 	"sdl_engine.h"
@@ -283,7 +284,7 @@
 1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flash.cpp
 	"flash.h"
 
-1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\main.cpp
+1586703242 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\main.cpp
 	"flappy_bird.h"
 
 1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.cpp
@@ -297,4 +298,10 @@
 
 1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\sfx.cpp
 	"sfx.h"
+
+1586703183 c:\users\ngoc nguyen\desktop\flappybirdreborn\menu.h
+	"sdl_engine.h"
+
+1586703223 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\menu.cpp
+	"menu.h"
 
