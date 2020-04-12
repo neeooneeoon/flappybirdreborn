@@ -47,6 +47,9 @@
 		<Unit filename="flash.cpp" />
 		<Unit filename="flash.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
+		<Unit filename="message.cpp" />
+		<Unit filename="message.h" />
 		<Unit filename="pipe.cpp" />
 		<Unit filename="pipe.h" />
 		<Unit filename="scoreboard.cpp" />

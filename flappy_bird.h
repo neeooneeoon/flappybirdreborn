@@ -13,7 +13,7 @@
 #include "scoreboard.h"
 #include "sfx.h"
 #include "flash.h"
-#include "menu.h"
+#include "message.h"
 
 using namespace std;
 
@@ -22,6 +22,7 @@ class FlappyBird
 public:
     void init();
     void quit();
+    void menu();
     void game_loop();
     void game_over();
     void update(double delta_time, bool &close);
@@ -33,6 +34,7 @@ public:
     void nextLevel();
 private:
     bool lose = false;
+    bool gameQuit = false;
 
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
@@ -57,6 +59,10 @@ private:
     Scoreboard scoreboard;
     int score = 0;
     int highscore = 0;
+
+    int delay = 60;
+
+    Message message;
 };
 
 #endif // FLAPPY_BIRD_H

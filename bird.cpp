@@ -2,12 +2,16 @@
 
 using namespace std;
 
-void Bird::select(){
+void Bird::select()
+{
     srand(time(NULL));
     int selection = rand() %3 +1;
-    if(selection ==1) path = "sprites\\redBird.png";
-    else if(selection == 2) path = "sprites\\yellowBird.png";
-    else if(selection == 3) path = "sprites\\blueBird.png";
+    if(selection ==1)
+        path = "sprites\\redBird.png";
+    else if(selection == 2)
+        path = "sprites\\yellowBird.png";
+    else if(selection == 3)
+        path = "sprites\\blueBird.png";
 }
 
 void Bird::init(SDL_Renderer* renderer)
@@ -58,7 +62,10 @@ void Bird::update()
 {
     dstrect.y += (speed+velocity) / 200;
     velocity += 9.8*5;
+}
 
+void Bird::aniUpdate()
+{
     delay++;
     if(delay == 15)
     {

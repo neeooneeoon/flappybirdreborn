@@ -1,0 +1,4 @@
+flappybird = 0 51 178 48
+getready = 0 0 184 50
+grayscale = 115 100 38 32
+tap = 0 100 114 60

@@ -2,6 +2,47 @@
 
 using namespace std;
 
+void FlappyBird::menu()
+{
+    bool menuLoop = true;
+    while(menuLoop == true)
+    {
+        while(SDL_PollEvent(&event))
+        {
+
+            switch(event.type)
+            {
+            case SDL_QUIT:
+                lose = true;
+                menuLoop = false;
+                gameQuit = true;
+                break;
+            case SDL_KEYDOWN:
+                switch(event.key.keysym.scancode)
+                {
+                case SDL_SCANCODE_W:
+                case SDL_SCANCODE_UP:
+                case SDL_SCANCODE_SPACE:
+                    bird.update();
+                    bird.keyUpdate();
+                    menuLoop = false;
+                    break;
+                default:
+                    break;
+                }
+            }
+        }
+        background.display(renderer, config.multiplier);
+        base.display(renderer, config.multiplier);
+        bird.display(renderer);
+        bird.aniUpdate();
+        message.display(renderer);
+        SDL_RenderPresent(renderer);
+        SDL_Delay(1280/60);
+    }
+    game_loop();
+}
+
 void FlappyBird::init()
 {
     initSDL(window, renderer, SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE);
@@ -13,6 +54,7 @@ void FlappyBird::init()
     scoreboard.update(0);
     sfx.init();
     pipeInit();
+    message.init(renderer);
     flash.init(renderer);
 }
 
@@ -25,6 +67,7 @@ void FlappyBird::quit()
     scoreboard.destroy();
     sfx.close();
     flash.destroy();
+    message.destroy();
     quitSDL(window, renderer);
 }
 
@@ -38,6 +81,7 @@ void FlappyBird::game_loop()
             {
             case SDL_QUIT:
                 lose = true;
+                gameQuit = true;
                 break;
             case SDL_KEYDOWN:
                 switch(event.key.keysym.scancode)
@@ -59,7 +103,9 @@ void FlappyBird::game_loop()
         update(1280/60, lose);
         display();
     }
-    game_over();
+    if(gameQuit == false){
+        game_over();
+    }
 }
 
 void FlappyBird::game_over()
@@ -87,6 +133,7 @@ void FlappyBird::game_over()
 void FlappyBird::update(double delta_time, bool &close)
 {
     bird.update();
+    bird.aniUpdate();
     bird.status(lose);
     SDL_Delay(delta_time);
 }
@@ -127,32 +174,39 @@ void FlappyBird::pipeInit()
 
 void FlappyBird::pipeGen()
 {
-    for(int i=0; i<6; i++)
-    {
-        if(pipe[i].dstrectDown.x<-60)
-        {
-            pipe[i].destroy();
-            pipe[i].init(renderer, 150);
-            if(randNum == 0)
-                pipe[i].loadGreen(renderer);
-            else
-                pipe[i].loadRed(renderer);
-            scoreStatus[i] = false;
-        }
-        if(collisionCheck(bird.dstrect, pipe[i].dstrectUp)
-                || collisionCheck(bird.dstrect, pipe[i].dstrectDown))
-        {
-            lose = true;
-        }
-        if(bird.dstrect.x > pipe[i].dstrectUp.x && scoreStatus[i]==false)
-        {
-            sfx.playPoint();
-            score++;
-            scoreStatus[i] = true;
-            scoreboard.update(score);
-        }
-        pipe[i].display(renderer, config.multiplier);
+    if(delay>0){
+        delay--;
     }
+    if(delay==0)
+    {
+        for(int i=0; i<6; i++)
+        {
+            if(pipe[i].dstrectDown.x<-60)
+            {
+                pipe[i].destroy();
+                pipe[i].init(renderer, 150);
+                if(randNum == 0)
+                    pipe[i].loadGreen(renderer);
+                else
+                    pipe[i].loadRed(renderer);
+                scoreStatus[i] = false;
+            }
+            if(collisionCheck(bird.dstrect, pipe[i].dstrectUp)
+                    || collisionCheck(bird.dstrect, pipe[i].dstrectDown))
+            {
+                lose = true;
+            }
+            if(bird.dstrect.x > pipe[i].dstrectUp.x && scoreStatus[i]==false)
+            {
+                sfx.playPoint();
+                score++;
+                scoreStatus[i] = true;
+                scoreboard.update(score);
+            }
+            pipe[i].display(renderer, config.multiplier);
+        }
+    }
+
 }
 
 void FlappyBird::pipeDestroy()

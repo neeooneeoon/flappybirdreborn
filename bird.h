@@ -17,6 +17,7 @@ public:
     void display(SDL_Renderer* renderer);
     void update();
     void keyUpdate();
+    void aniUpdate();
     void status(bool &close);
     void destroy();
 private:
