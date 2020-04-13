@@ -12,7 +12,7 @@ void FlappyBird::init()
     scoreboard.init(renderer);
     scoreboard.update(0);
     sfx.init();
-    pipeInit();
+    resInit();
     message.init(renderer);
     flash.init(renderer);
 }
@@ -22,7 +22,7 @@ void FlappyBird::quit()
     bird.destroy();
     background.destroy();
     base.destroy();
-    pipeDestroy();
+    resDestroy();
     scoreboard.destroy();
     sfx.close();
     flash.destroy();
@@ -152,7 +152,7 @@ void FlappyBird::game_over()
         SDL_RenderClear(renderer);
         background.display(renderer, config.multiplier);
         base.display(renderer, config.multiplier);
-        pipeGen();
+        resGen();
         bird.display(renderer);
         if(flash.alpha>0)
             flash.alpha-=10;
@@ -174,7 +174,7 @@ void FlappyBird::display()
     SDL_RenderClear(renderer);
     background.display(renderer, config.multiplier);
     base.display(renderer, config.multiplier);
-    pipeGen();
+    resGen();
     bird.display(renderer);
     scoreboard.display(renderer);
     SDL_RenderPresent(renderer);
@@ -189,7 +189,7 @@ void FlappyBird::collision()
     }
 }
 
-void FlappyBird::pipeInit()
+void FlappyBird::resInit()
 {
     randNum = rand() % 2;
     for(int i=0; i<6; i++)
@@ -200,10 +200,12 @@ void FlappyBird::pipeInit()
             pipe[i].loadRed(renderer);
         pipe[i].init(renderer, i*250);
         scoreStatus[i]=false;
+        coin[i].loadPNG(renderer);
+        coin[i].init(renderer, i*250);
     }
 }
 
-void FlappyBird::pipeGen()
+void FlappyBird::resGen()
 {
     if(delay>0)
     {
@@ -236,16 +238,18 @@ void FlappyBird::pipeGen()
                 scoreboard.update(score);
             }
             pipe[i].display(renderer, config.multiplier);
+            coin[i].display(renderer, config.multiplier);
         }
     }
 
 }
 
-void FlappyBird::pipeDestroy()
+void FlappyBird::resDestroy()
 {
     for(int i=0; i<6; i++)
     {
         pipe[i].destroy();
+        coin[i].destroy();
     }
 }
 

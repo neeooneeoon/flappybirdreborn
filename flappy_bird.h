@@ -14,6 +14,7 @@
 #include "sfx.h"
 #include "flash.h"
 #include "message.h"
+#include "coin.h"
 
 using namespace std;
 
@@ -28,9 +29,9 @@ public:
     void update(double delta_time, bool &close);
     void display();
     void collision();
-    void pipeInit();
-    void pipeGen();
-    void pipeDestroy();
+    void resInit();
+    void resGen();
+    void resDestroy();
     void nextLevel();
 private:
     bool lose = false;
@@ -53,6 +54,8 @@ private:
     Config config;
 
     Pipe pipe[6];
+
+    Coin coin[6];
 
     Scoreboard scoreboard;
     int score = 0;

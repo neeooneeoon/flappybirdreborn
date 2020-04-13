@@ -248,10 +248,10 @@
 	<stdlib.h>
 	<time.h>
 
-1586767172 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
+1586776847 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
-1586771378 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
+1586775700 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
 	<SDL_image.h>
 	<SDL.h>
 	<string>
@@ -264,6 +264,7 @@
 	"sfx.h"
 	"flash.h"
 	"message.h"
+	"coin.h"
 
 1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.h
 	"sdl_engine.h"
@@ -312,4 +313,12 @@
 	"message.h"
 
 1586766886 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\icon.rc
+
+1586776608 c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.h
+	<stdlib.h>
+	<time.h>
+	"sdl_engine.h"
+
+1586777026 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.cpp
+	"coin.h"
 
