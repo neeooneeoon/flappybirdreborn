@@ -38,7 +38,6 @@ private:
 
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    int randNum;
     string WINDOW_TITLE = "Flappy Bird SDL - Build 100420";
 
     SDL_Window* window;
@@ -54,15 +53,19 @@ private:
     Config config;
 
     Pipe pipe[6];
-    bool scoreStatus[6];
 
     Scoreboard scoreboard;
     int score = 0;
     int highscore = 0;
-
-    int delay = 60;
+    bool scoreStatus[6];
 
     Message message;
+
+    int delay = 60;
+    int randNum;
+
+    int mouseX;
+    int mouseY;
 };
 
 #endif // FLAPPY_BIRD_H

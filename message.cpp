@@ -16,6 +16,9 @@ void Message::display(SDL_Renderer* renderer)
 
     if(readyBlink == true && blinkDelay>0)
     {
+        srcrect = {0,100,114,60};
+        dstrect = {595, 485, 114, 60};
+        SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);
         srcrect = {0,0,184,50};
         dstrect = {565, 185, 184, 50};
         SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);

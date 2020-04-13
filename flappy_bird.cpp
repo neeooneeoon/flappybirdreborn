@@ -2,47 +2,6 @@
 
 using namespace std;
 
-void FlappyBird::menu()
-{
-    bool menuLoop = true;
-    while(menuLoop == true)
-    {
-        while(SDL_PollEvent(&event))
-        {
-
-            switch(event.type)
-            {
-            case SDL_QUIT:
-                lose = true;
-                menuLoop = false;
-                gameQuit = true;
-                break;
-            case SDL_KEYDOWN:
-                switch(event.key.keysym.scancode)
-                {
-                case SDL_SCANCODE_W:
-                case SDL_SCANCODE_UP:
-                case SDL_SCANCODE_SPACE:
-                    bird.update();
-                    bird.keyUpdate();
-                    menuLoop = false;
-                    break;
-                default:
-                    break;
-                }
-            }
-        }
-        background.display(renderer, config.multiplier);
-        base.display(renderer, config.multiplier);
-        bird.display(renderer);
-        bird.aniUpdate();
-        message.display(renderer);
-        SDL_RenderPresent(renderer);
-        SDL_Delay(1280/60);
-    }
-    game_loop();
-}
-
 void FlappyBird::init()
 {
     initSDL(window, renderer, SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE);
@@ -71,6 +30,64 @@ void FlappyBird::quit()
     quitSDL(window, renderer);
 }
 
+void FlappyBird::menu()
+{
+    bool menuLoop = true;
+    while(menuLoop == true)
+    {
+        while(SDL_PollEvent(&event))
+        {
+
+            switch(event.type)
+            {
+            case SDL_MOUSEMOTION:
+                mouseX = event.motion.x;
+                mouseY = event.motion.y;
+                cout << mouseX << " " << mouseY << endl;
+                break;
+            case SDL_QUIT:
+                lose = true;
+                menuLoop = false;
+                gameQuit = true;
+                break;
+            case SDL_MOUSEBUTTONDOWN:
+                switch(event.button.button)
+                {
+                case SDL_BUTTON_LEFT:
+                    bird.update();
+                    bird.keyUpdate();
+                    menuLoop = false;
+                    break;
+                default:
+                    break;
+                }
+            case SDL_KEYDOWN:
+                switch(event.key.keysym.scancode)
+                {
+                case SDL_SCANCODE_W:
+                case SDL_SCANCODE_UP:
+                case SDL_SCANCODE_SPACE:
+                case SDL_BUTTON_LEFT:
+                    bird.update();
+                    bird.keyUpdate();
+                    menuLoop = false;
+                    break;
+                default:
+                    break;
+                }
+            }
+        }
+        background.display(renderer, config.multiplier);
+        base.display(renderer, config.multiplier);
+        bird.display(renderer);
+        bird.aniUpdate();
+        message.display(renderer);
+        SDL_RenderPresent(renderer);
+        SDL_Delay(1280/60);
+    }
+    game_loop();
+}
+
 void FlappyBird::game_loop()
 {
     while(!lose)
@@ -79,10 +96,25 @@ void FlappyBird::game_loop()
         {
             switch(event.type)
             {
+            case SDL_MOUSEMOTION:
+                mouseX = event.motion.x;
+                mouseY = event.motion.y;
+                cout << mouseX << " " << mouseY << endl;
+                break;
             case SDL_QUIT:
                 lose = true;
                 gameQuit = true;
                 break;
+            case SDL_MOUSEBUTTONDOWN:
+                switch(event.button.button)
+                {
+                case SDL_BUTTON_LEFT:
+                    bird.keyUpdate();
+                    sfx.playWing();
+                    break;
+                default:
+                    break;
+                }
             case SDL_KEYDOWN:
                 switch(event.key.keysym.scancode)
                 {
@@ -91,7 +123,6 @@ void FlappyBird::game_loop()
                 case SDL_SCANCODE_SPACE:
                     bird.keyUpdate();
                     sfx.playWing();
-
                     break;
                 default:
                     break;
@@ -103,7 +134,8 @@ void FlappyBird::game_loop()
         update(1280/60, lose);
         display();
     }
-    if(gameQuit == false){
+    if(gameQuit == false)
+    {
         game_over();
     }
 }
@@ -122,7 +154,6 @@ void FlappyBird::game_over()
         base.display(renderer, config.multiplier);
         pipeGen();
         bird.display(renderer);
-        scoreboard.display(renderer);
         if(flash.alpha>0)
             flash.alpha-=10;
         flash.displayAlphaNone(renderer);
@@ -174,7 +205,8 @@ void FlappyBird::pipeInit()
 
 void FlappyBird::pipeGen()
 {
-    if(delay>0){
+    if(delay>0)
+    {
         delay--;
     }
     if(delay==0)
