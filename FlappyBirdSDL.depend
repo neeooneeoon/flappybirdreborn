@@ -248,10 +248,10 @@
 	<stdlib.h>
 	<time.h>
 
-1586766175 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
+1586767172 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
-1586766001 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
+1586771378 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
 	<SDL_image.h>
 	<SDL.h>
 	<string>
@@ -310,4 +310,6 @@
 
 1586764646 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\message.cpp
 	"message.h"
+
+1586766886 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\icon.rc
 
