@@ -11,14 +11,21 @@ using namespace std;
 class Coin{
 public:
     void loadPNG(SDL_Renderer* renderer);
+    void getRandomLength();
     void init(SDL_Renderer* renderer, int pos);
     void display(SDL_Renderer* renderer, int multiplier);
     void destroy();
+
+    SDL_Rect srcrect, dstrect;
 private:
     SDL_Surface* surface;
     SDL_Texture* texture;
-    SDL_Rect rect;
     char* path = "sprites\\coin.png";
+
+    int delay = 10;
+    int status = 1;
+    int yPos = 150;
+    bool coinReverse = false;
 };
 
 #endif // COIN_H

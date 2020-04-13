@@ -225,6 +225,12 @@ void FlappyBird::resGen()
                     pipe[i].loadRed(renderer);
                 scoreStatus[i] = false;
             }
+            if(coin[i].dstrect.x<-60)
+            {
+                coin[i].destroy();
+                coin[i].loadPNG(renderer);
+                coin[i].init(renderer, -3);
+            }
             if(collisionCheck(bird.dstrect, pipe[i].dstrectUp)
                     || collisionCheck(bird.dstrect, pipe[i].dstrectDown))
             {

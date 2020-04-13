@@ -231,7 +231,7 @@
 	<SDL_TTF.h>
 	<SDL_mixer.h>
 
-1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\config.h
+1586790965 c:\users\ngoc nguyen\desktop\flappybirdreborn\config.h
 
 1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\base.cpp
 	"base.h"
@@ -248,7 +248,7 @@
 	<stdlib.h>
 	<time.h>
 
-1586776847 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
+1586795791 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
 1586775700 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
@@ -314,11 +314,11 @@
 
 1586766886 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\icon.rc
 
-1586776608 c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.h
+1586795970 c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.h
 	<stdlib.h>
 	<time.h>
 	"sdl_engine.h"
 
-1586777026 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.cpp
+1586795936 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.cpp
 	"coin.h"
 
