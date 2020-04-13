@@ -46,6 +46,9 @@
 		<Unit filename="flappy_bird.h" />
 		<Unit filename="flash.cpp" />
 		<Unit filename="flash.h" />
+		<Unit filename="icon.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="menu.cpp" />
 		<Unit filename="message.cpp" />
