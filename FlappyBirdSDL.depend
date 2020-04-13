@@ -314,7 +314,7 @@
 
 1586766886 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\icon.rc
 
-1586795970 c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.h
+1586796249 c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.h
 	<stdlib.h>
 	<time.h>
 	"sdl_engine.h"

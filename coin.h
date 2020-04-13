@@ -22,7 +22,7 @@ private:
     SDL_Texture* texture;
     char* path = "sprites\\coin.png";
 
-    int delay = 10;
+    int delay = 5;
     int status = 1;
     int yPos = 150;
     bool coinReverse = false;
