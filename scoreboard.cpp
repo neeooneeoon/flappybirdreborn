@@ -5,6 +5,8 @@ using namespace std;
 void Scoreboard::init(SDL_Renderer* renderer)
 {
     loadSprites(surface, texture, renderer, path);
+    SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
+    SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 }
 
 void Scoreboard::getNum(char num)
@@ -44,9 +46,14 @@ void Scoreboard::getNum(char num)
     }
 }
 
-void Scoreboard::display(SDL_Renderer* renderer)
+void Scoreboard::display(SDL_Renderer* renderer, bool alpha)
 {
-
+    if(alpha==true){
+        alphaVal = 100;
+    }else{
+        alphaVal = 255;
+    }
+    SDL_SetTextureAlphaMod(texture, alphaVal);
     anchor = 640 - 12*(scoreStr.length()-1);
     for(int i=0; i<scoreStr.length(); i++)
     {

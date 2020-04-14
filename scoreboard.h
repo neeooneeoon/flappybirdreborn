@@ -10,15 +10,17 @@ using namespace std;
 class Scoreboard{
 public:
     void init(SDL_Renderer* renderer);
-    void display(SDL_Renderer* renderer);
+    void display(SDL_Renderer* renderer, bool alpha);
     void update(int score);
     void destroy();
     void getNum(char num);
+
+    SDL_Rect srcrect, dstrect;
 private:
+    unsigned char alphaVal = 100;
     char* path = "sprites\\scoresheet.png";
     SDL_Surface *surface = NULL;
     SDL_Texture *texture = NULL;
-    SDL_Rect srcrect, dstrect;
     int anchor = 640; //step = 36; x
     stringstream ss;
     string scoreStr;

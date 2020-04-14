@@ -1,11 +1,12 @@
 #include "sfx.h"
 
 void SFX::init(){
-    wing = Mix_LoadWAV("wav\\wing.wav");
-    swoosh = Mix_LoadWAV("wav\\swoosh.wav");
-    point = Mix_LoadWAV("wav\\point.wav");
-    hit = Mix_LoadWAV("wav\\hit.wav");
-    die = Mix_LoadWAV("wav\\die.wav");
+    wing = Mix_LoadWAV("sounds\\wing.wav");
+    swoosh = Mix_LoadWAV("sounds\\swoosh.wav");
+    point = Mix_LoadWAV("sounds\\point.wav");
+    hit = Mix_LoadWAV("sounds\\hit.wav");
+    die = Mix_LoadWAV("sounds\\die.wav");
+    coin = Mix_LoadWAV("sounds\\coin.wav");
 }
 
 void SFX::playWing(){
@@ -26,6 +27,10 @@ void SFX::playHit(){
 
 void SFX::playDie(){
     Mix_PlayChannel(-1,die,0);
+}
+
+void SFX::playCoin(){
+    Mix_PlayChannel(-1, coin,0);
 }
 
 void SFX::close(){

@@ -18,7 +18,7 @@ void Coin::init(SDL_Renderer* renderer, int pos)
     dstrect = {1420+pos, yPos, 53/2, 80/2};
 }
 
-void Coin::display(SDL_Renderer* renderer, int multiplier)
+void Coin::display(SDL_Renderer* renderer)
 {
     if(delay <= 0)
     {
@@ -77,6 +77,10 @@ void Coin::display(SDL_Renderer* renderer, int multiplier)
         delay--;
     }
     SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);
+
+}
+
+void Coin::updatePos(int multiplier){
     dstrect.x -= 4 * multiplier;
 }
 

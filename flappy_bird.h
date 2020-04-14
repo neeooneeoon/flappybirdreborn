@@ -5,6 +5,10 @@
 #include <SDL.h>
 #include <string>
 
+#include <stdlib.h>
+#include <time.h>
+#include <cmath>
+
 #include "sdl_engine.h"
 #include "bird.h"
 #include "background.h"
@@ -39,7 +43,7 @@ private:
 
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    string WINDOW_TITLE = "Flappy Bird SDL - Build 130420";
+    string WINDOW_TITLE = "Flappy Bird SDL - Build 140420";
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -56,6 +60,8 @@ private:
     Pipe pipe[6];
 
     Coin coin[6];
+    bool coinStatus[6];
+    int coinRandom[6];
 
     Scoreboard scoreboard;
     int score = 0;

@@ -176,7 +176,14 @@ void FlappyBird::display()
     base.display(renderer, config.multiplier);
     resGen();
     bird.display(renderer);
-    scoreboard.display(renderer);
+    if(abs(bird.dstrect.y-scoreboard.dstrect.y<=75))
+    {
+        scoreboard.display(renderer, true);
+    }
+    else
+    {
+        scoreboard.display(renderer, false);
+    }
     SDL_RenderPresent(renderer);
 }
 
@@ -200,8 +207,11 @@ void FlappyBird::resInit()
             pipe[i].loadRed(renderer);
         pipe[i].init(renderer, i*250);
         scoreStatus[i]=false;
+
         coin[i].loadPNG(renderer);
         coin[i].init(renderer, i*250);
+        coinStatus[i]=true;
+        coinRandom[i] = rand() % 2;
     }
 }
 
@@ -217,34 +227,40 @@ void FlappyBird::resGen()
         {
             if(pipe[i].dstrectDown.x<-60)
             {
-                pipe[i].destroy();
                 pipe[i].init(renderer, 150);
-                if(randNum == 0)
-                    pipe[i].loadGreen(renderer);
-                else
-                    pipe[i].loadRed(renderer);
                 scoreStatus[i] = false;
             }
             if(coin[i].dstrect.x<-60)
             {
-                coin[i].destroy();
-                coin[i].loadPNG(renderer);
-                coin[i].init(renderer, -3);
+                coin[i].init(renderer, 10);
+                coinStatus[i] = true;
+                coinRandom[i] = rand() % 2;
             }
             if(collisionCheck(bird.dstrect, pipe[i].dstrectUp)
                     || collisionCheck(bird.dstrect, pipe[i].dstrectDown))
             {
                 lose = true;
             }
+            if(collisionCheck(bird.dstrect, coin[i].dstrect) && coinStatus[i]==true && coinRandom[i]==1)
+            {
+                sfx.playCoin();
+                score+=2;
+                scoreboard.update(score);
+                coinStatus[i]=false;
+            }
             if(bird.dstrect.x > pipe[i].dstrectUp.x && scoreStatus[i]==false)
             {
                 sfx.playPoint();
-                score++;
+                score+=config.multiplier;
                 scoreStatus[i] = true;
                 scoreboard.update(score);
             }
             pipe[i].display(renderer, config.multiplier);
-            coin[i].display(renderer, config.multiplier);
+            coin[i].updatePos(config.multiplier);
+            if(coinStatus[i]==true && coinRandom[i]==1)
+            {
+                coin[i].display(renderer);
+            }
         }
     }
 
@@ -261,7 +277,7 @@ void FlappyBird::resDestroy()
 
 void FlappyBird::nextLevel()
 {
-    if(score==20)
+    if(score>=20)
     {
         config.multiplier = 2;
     }
