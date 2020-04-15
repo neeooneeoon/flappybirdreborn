@@ -33,10 +33,6 @@
 		</Compiler>
 		<Unit filename="background.cpp" />
 		<Unit filename="background.h" />
-		<Unit filename="backup.cpp">
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
 		<Unit filename="base.cpp" />
 		<Unit filename="base.h" />
 		<Unit filename="bird.cpp" />
