@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
     FlappyBird FlappyBird;
 
     FlappyBird.init();
-    FlappyBird.menu();
+    FlappyBird.getReady();
     FlappyBird.quit();
 
     return 0;

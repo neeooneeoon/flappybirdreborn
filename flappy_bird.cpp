@@ -5,16 +5,14 @@ using namespace std;
 void FlappyBird::init()
 {
     initSDL(window, renderer, SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE);
-    setDefaultBGColor(renderer);
     bird.init(renderer);
     background.init(renderer);
     base.init(renderer);
     scoreboard.init(renderer);
-    scoreboard.update(0);
-    sfx.init();
-    resInit();
     message.init(renderer);
     flash.init(renderer);
+    sfx.init();
+    resInit();
 }
 
 void FlappyBird::quit()
@@ -24,13 +22,13 @@ void FlappyBird::quit()
     base.destroy();
     resDestroy();
     scoreboard.destroy();
-    sfx.close();
     flash.destroy();
     message.destroy();
+    sfx.close();
     quitSDL(window, renderer);
 }
 
-void FlappyBird::menu()
+void FlappyBird::getReady()
 {
     bool menuLoop = true;
     while(menuLoop == true)
@@ -43,7 +41,6 @@ void FlappyBird::menu()
             case SDL_MOUSEMOTION:
                 mouseX = event.motion.x;
                 mouseY = event.motion.y;
-                cout << mouseX << " " << mouseY << endl;
                 break;
             case SDL_QUIT:
                 lose = true;
@@ -83,7 +80,7 @@ void FlappyBird::menu()
         bird.aniUpdate();
         message.display(renderer);
         SDL_RenderPresent(renderer);
-        SDL_Delay(1280/60);
+        frameDelay();
     }
     game_loop();
 }
@@ -129,9 +126,12 @@ void FlappyBird::game_loop()
                 }
             }
         }
+        bird.update();
+        bird.aniUpdate();
+        bird.status(lose);
         nextLevel();
-        collision();
-        update(1280/60, lose);
+        baseCollision();
+        frameDelay();
         display();
     }
     if(gameQuit == false)
@@ -144,29 +144,22 @@ void FlappyBird::game_over()
 {
     config.multiplier = 0;
     sfx.playHit();
-    sfx.playDie();
     flash.display(renderer);
+    sfx.playDie();
     while(bird.dstrect.y<1000)
     {
-        update(1280/60, lose);
+        bird.update();
+        bird.aniUpdate();
+        bird.status(lose);
         SDL_RenderClear(renderer);
         background.display(renderer, config.multiplier);
         base.display(renderer, config.multiplier);
         resGen();
         bird.display(renderer);
-        if(flash.alpha>0)
-            flash.alpha-=10;
-        flash.displayAlphaNone(renderer);
+        flash.displayNoAlpha(renderer);
+        frameDelay();
         SDL_RenderPresent(renderer);
     }
-}
-
-void FlappyBird::update(double delta_time, bool &close)
-{
-    bird.update();
-    bird.aniUpdate();
-    bird.status(lose);
-    SDL_Delay(delta_time);
 }
 
 void FlappyBird::display()
@@ -176,23 +169,17 @@ void FlappyBird::display()
     base.display(renderer, config.multiplier);
     resGen();
     bird.display(renderer);
-    if(abs(bird.dstrect.y-scoreboard.dstrect.y<=75))
-    {
-        scoreboard.display(renderer, true);
-    }
-    else
-    {
-        scoreboard.display(renderer, false);
-    }
+    scoreboard.display(renderer, bird.dstrect.y, scoreboard.dstrect.y);
     SDL_RenderPresent(renderer);
 }
 
-void FlappyBird::collision()
-{
-    if(collisionCheck(bird.dstrect, base.rect1)
-            || collisionCheck(bird.dstrect, base.rect2))
-    {
-        lose = true;
+void FlappyBird::frameDelay(){
+    if(frameNum == 3){
+        SDL_Delay(20);
+        frameNum = 1;
+    }else{
+        SDL_Delay(22);
+        frameNum++;
     }
 }
 
@@ -248,7 +235,7 @@ void FlappyBird::resGen()
                 scoreboard.update(score);
                 coinStatus[i]=false;
             }
-            if(bird.dstrect.x > pipe[i].dstrectUp.x && scoreStatus[i]==false)
+            if(bird.dstrect.x > pipe[i].dstrectUp.x && scoreStatus[i]==false && lose == false)
             {
                 sfx.playPoint();
                 score+=config.multiplier;
@@ -263,7 +250,6 @@ void FlappyBird::resGen()
             }
         }
     }
-
 }
 
 void FlappyBird::resDestroy()
@@ -272,6 +258,15 @@ void FlappyBird::resDestroy()
     {
         pipe[i].destroy();
         coin[i].destroy();
+    }
+}
+
+void FlappyBird::baseCollision()
+{
+    if(collisionCheck(bird.dstrect, base.rect1)
+            || collisionCheck(bird.dstrect, base.rect2))
+    {
+        lose = true;
     }
 }
 

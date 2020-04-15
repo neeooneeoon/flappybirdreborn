@@ -7,7 +7,6 @@
 
 #include <stdlib.h>
 #include <time.h>
-#include <cmath>
 
 #include "sdl_engine.h"
 #include "bird.h"
@@ -27,15 +26,15 @@ class FlappyBird
 public:
     void init();
     void quit();
-    void menu();
+    void getReady();
     void game_loop();
     void game_over();
-    void update(double delta_time, bool &close);
     void display();
-    void collision();
+    void frameDelay();
     void resInit();
     void resGen();
     void resDestroy();
+    void baseCollision();
     void nextLevel();
 private:
     bool lose = false;
@@ -43,7 +42,7 @@ private:
 
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    string WINDOW_TITLE = "Flappy Bird SDL - Build 140420";
+    string WINDOW_TITLE = "Flappy Bird SDL - Build 150420";
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -75,6 +74,8 @@ private:
 
     int mouseX;
     int mouseY;
+
+    int frameNum = 1;
 };
 
 #endif // FLAPPY_BIRD_H

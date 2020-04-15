@@ -248,16 +248,15 @@
 	<stdlib.h>
 	<time.h>
 
-1586858373 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
+1586926155 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
-1586858210 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
+1586927801 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
 	<SDL_image.h>
 	<SDL.h>
 	<string>
 	<stdlib.h>
 	<time.h>
-	<cmath>
 	"sdl_engine.h"
 	"bird.h"
 	"background.h"
@@ -274,30 +273,31 @@
 	<stdlib.h>
 	<time.h>
 
-1586858392 c:\users\ngoc nguyen\desktop\flappybirdreborn\scoreboard.h
+1586926186 c:\users\ngoc nguyen\desktop\flappybirdreborn\scoreboard.h
 	"sdl_engine.h"
 	<sstream>
 	<string>
+	<cmath>
 
 1586855225 c:\users\ngoc nguyen\desktop\flappybirdreborn\sfx.h
 	"sdl_engine.h"
 
-1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\flash.h
+1586927250 c:\users\ngoc nguyen\desktop\flappybirdreborn\flash.h
 	"sdl_engine.h"
 
-1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flash.cpp
+1586927236 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flash.cpp
 	"flash.h"
 
-1586706013 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\main.cpp
+1586924117 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\main.cpp
 	"flappy_bird.h"
 
 1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.cpp
 	"pipe.h"
 
-1586858528 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\scoreboard.cpp
+1586926199 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\scoreboard.cpp
 	"scoreboard.h"
 
-1586610532 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\sdl_engine.cpp
+1586925630 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\sdl_engine.cpp
 	"sdl_engine.h"
 
 1586855246 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\sfx.cpp

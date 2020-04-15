@@ -4,13 +4,14 @@
 #include "sdl_engine.h";
 #include <sstream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
 class Scoreboard{
 public:
     void init(SDL_Renderer* renderer);
-    void display(SDL_Renderer* renderer, bool alpha);
+    void display(SDL_Renderer* renderer, int birdY, int scoreboardY);
     void update(int score);
     void destroy();
     void getNum(char num);

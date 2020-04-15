@@ -7,6 +7,10 @@ void Scoreboard::init(SDL_Renderer* renderer)
     loadSprites(surface, texture, renderer, path);
     SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
     SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+
+    ss.str("");
+    ss << 0;
+    scoreStr = ss.str();
 }
 
 void Scoreboard::getNum(char num)
@@ -46,9 +50,9 @@ void Scoreboard::getNum(char num)
     }
 }
 
-void Scoreboard::display(SDL_Renderer* renderer, bool alpha)
+void Scoreboard::display(SDL_Renderer* renderer, int birdY, int scoreboardY)
 {
-    if(alpha==true){
+    if(abs(birdY-scoreboardY<=50)){
         alphaVal = 100;
     }else{
         alphaVal = 255;
