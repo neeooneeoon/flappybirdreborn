@@ -85,5 +85,5 @@ void Scoreboard::update(int score)
 
 void Scoreboard::destroy()
 {
-    destroyObject(surface, texture);
+    SDL_DestroyTexture(texture);
 }

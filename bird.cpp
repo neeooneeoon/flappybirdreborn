@@ -106,5 +106,5 @@ void Bird::keyUpdate()
 
 void Bird::destroy()
 {
-    destroyObject(surface, texture);
+    SDL_DestroyTexture(texture);
 }

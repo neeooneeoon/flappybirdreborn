@@ -26,5 +26,5 @@ void Background::display(SDL_Renderer* renderer, int multiplier){
 }
 
 void Background::destroy(){
-    destroyObject(surface, texture);
+    SDL_DestroyTexture(texture);
 }

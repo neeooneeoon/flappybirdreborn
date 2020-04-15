@@ -31,5 +31,5 @@ void Pipe::display(SDL_Renderer* renderer, int multiplier){
 }
 
 void Pipe::destroy(){
-    destroyObject(surface, texture);
+    SDL_DestroyTexture(texture);
 }

@@ -25,5 +25,5 @@ void Flash::displayNoAlpha(SDL_Renderer* renderer){
 }
 
 void Flash::destroy(){
-    destroyObject(surface, texture);
+    SDL_DestroyTexture(texture);
 }

@@ -43,5 +43,5 @@ void Message::display(SDL_Renderer* renderer)
 
 void Message::destroy()
 {
-    destroyObject(surface, texture);
+    SDL_DestroyTexture(texture);
 }

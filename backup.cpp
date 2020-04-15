@@ -37,4 +37,10 @@ void setDefaultBackground(SDL_Renderer* &renderer);
 
 ---
 
+//Full-screen Mode
+    //window = SDL_CreateWindow(WINDOW_TITLE.c_str(), SDL_WINDOWPOS_CENTERED,
+    //SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_FULLSCREEN_DESKTOP);
 
+---
+//Software-Renderer
+    //renderer = SDL_CreateSoftwareRenderer(SDL_GetWindowSurface(window));

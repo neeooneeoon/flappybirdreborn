@@ -86,5 +86,5 @@ void Coin::updatePos(int multiplier){
 
 void Coin::destroy()
 {
-    destroyObject(surface, texture);
+    SDL_DestroyTexture(texture);
 }

@@ -18,5 +18,6 @@ void Base::display(SDL_Renderer* renderer, int multiplier){
 }
 
 void Base::destroy(){
-    destroyObject(surface, texture);
+    SDL_DestroyTexture(texture);
 }
+
