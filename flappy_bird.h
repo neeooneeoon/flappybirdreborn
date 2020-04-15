@@ -48,13 +48,14 @@ private:
     SDL_Renderer* renderer;
     SDL_Event event;
 
+    Config config;
+
     Bird bird;
     Background background;
     Base base;
     SFX sfx;
     Flash flash;
-
-    Config config;
+    Message message;
 
     Pipe pipe[6];
 
@@ -67,15 +68,13 @@ private:
     int highscore = 0;
     bool scoreStatus[6];
 
-    Message message;
-
     int delay = 60;
     int randNum;
 
+    int frameNum = 1;
+
     int mouseX;
     int mouseY;
-
-    int frameNum = 1;
 };
 
 #endif // FLAPPY_BIRD_H

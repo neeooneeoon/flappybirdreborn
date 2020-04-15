@@ -53,6 +53,7 @@
 		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
 		<Unit filename="message.cpp" />
 		<Unit filename="message.h" />
 		<Unit filename="pipe.cpp" />
