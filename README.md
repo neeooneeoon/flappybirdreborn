@@ -2,20 +2,11 @@
 
 Flappy Bird Reborn | C++ | [SDL2.0]((https://www.libsdl.org/)) | Advanced Programming's Assignment
 
-Flappy Bird Reborn là game có lối chơi dựa theo game mobile Flappy Bird nhưng có thêm nhiều tuỳ chỉnh cho người chơi hơn cũng như nhiều chế độ chơi hơn!
+Flappy Bird Reborn là game có lối chơi dựa theo game mobile Flappy Bird với lối chơi đa dạng, đồ hoạ nâng cấp cũng như nhiều chế độ chơi hơn!
 
-Flappy Bird Reborn is a rendition of Flappy Bird - 2014's Mobile Game Hit. It's your favorite mobile game now on PC with more customization, challenges & fun!
+Flappy Bird Reborn is a rendition of Flappy Bird - 2014's Mobile Game Hit. It's your favorite mobile game now on PC with updated graphics, more challenges & fun!
 
 ![Image Of Flappy Bird Reborn Alpha](https://github.com/neeooneeoon/advprogramming/blob/master/Other/fpp_gif-min.gif)
-
-## Gameplay
-
-TBA...
-
-## Known Bugs:
-
-- [Ongoing] The game is capped at 60fps.
-- ...
 
 ## Credits
 - Developer: Ngoc Nguyen
