@@ -80,7 +80,7 @@ void FlappyBird::getReady()
         bird.aniUpdate();
         message.display(renderer);
         SDL_RenderPresent(renderer);
-        framerateControl();
+        framerateControl(config.frameNum);
     }
     game_loop();
 }
@@ -130,7 +130,7 @@ void FlappyBird::game_loop()
         bird.status(lose);
         nextLevel();
         baseCollision();
-        framerateControl();
+        framerateControl(config.frameNum);
         display();
     }
     if(gameQuit == false)
@@ -155,7 +155,7 @@ void FlappyBird::game_over()
         resGen();
         bird.display(renderer);
         flash.displayNoAlpha(renderer);
-        framerateControl();
+        framerateControl(config.frameNum);
         SDL_RenderPresent(renderer);
     }
 }
@@ -266,12 +266,4 @@ void FlappyBird::nextLevel()
     }
 }
 
-void FlappyBird::framerateControl(){
-    if(frameNum == 3){
-        SDL_Delay(20);
-        frameNum = 1;
-    }else{
-        SDL_Delay(22);
-        frameNum++;
-    }
-}
+

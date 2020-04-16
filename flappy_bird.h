@@ -1,10 +1,7 @@
 #ifndef FLAPPY_BIRD_H
 #define FLAPPY_BIRD_H
 
-#include <SDL_image.h>
-#include <SDL.h>
 #include <string>
-
 #include <stdlib.h>
 #include <time.h>
 
@@ -35,14 +32,13 @@ public:
     void resDestroy();
     void baseCollision();
     void nextLevel();
-    void framerateControl();
 private:
     bool lose = false;
     bool gameQuit = false;
 
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    string WINDOW_TITLE = "Flappy Bird SDL - Build 150420";
+    string WINDOW_TITLE = "Flappy Bird SDL - Build 160420";
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -73,8 +69,6 @@ private:
 
     int mouseX;
     int mouseY;
-
-    int frameNum = 1;
 };
 
 #endif // FLAPPY_BIRD_H

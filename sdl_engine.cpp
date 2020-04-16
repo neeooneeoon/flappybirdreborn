@@ -76,4 +76,16 @@ bool collisionCheck(SDL_Rect &rect1, SDL_Rect &rect2)
     return SDL_HasIntersection(&rect1, &rect2);
 }
 
-
+void framerateControl(int &frameNum)
+{
+    if(frameNum == 3)
+    {
+        SDL_Delay(20);
+        frameNum = 1;
+    }
+    else
+    {
+        SDL_Delay(22);
+        frameNum++;
+    }
+}
