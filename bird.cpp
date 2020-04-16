@@ -55,13 +55,13 @@ void Bird::status(bool &close)
         close = true;
     }
 
-
 }
 
 void Bird::update()
 {
     dstrect.y += (speed+velocity) / 200;
     velocity += 9.8*5;
+    aniUpdate();
 }
 
 void Bird::aniUpdate()

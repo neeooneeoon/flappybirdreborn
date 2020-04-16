@@ -1,0 +1,111 @@
+# depslib dependency file v1.0
+1586930861 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\background.cpp
+	"background.h"
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\background.h
+	"sdl_engine.h"
+	"config.h"
+	<stdlib.h>
+	<time.h>
+
+1587054955 c:\users\ngoc nguyen\desktop\flappybirdreborn\sdl_engine.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_TTF.h>
+	<SDL_mixer.h>
+
+1586790965 c:\users\ngoc nguyen\desktop\flappybirdreborn\config.h
+
+1586930887 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\base.cpp
+	"base.h"
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\base.h
+	"sdl_engine.h"
+	"config.h"
+
+1587053419 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\bird.cpp
+	"bird.h"
+
+1586708107 c:\users\ngoc nguyen\desktop\flappybirdreborn\bird.h
+	"sdl_engine.h"
+	<stdlib.h>
+	<time.h>
+
+1586930877 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.cpp
+	"coin.h"
+
+1586852063 c:\users\ngoc nguyen\desktop\flappybirdreborn\coin.h
+	<stdlib.h>
+	<time.h>
+	"sdl_engine.h"
+
+1587053431 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
+	"flappy_bird.h"
+
+1587054955 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
+	<SDL_image.h>
+	<SDL.h>
+	<string>
+	<stdlib.h>
+	<time.h>
+	"sdl_engine.h"
+	"bird.h"
+	"background.h"
+	"base.h"
+	"pipe.h"
+	"scoreboard.h"
+	"sfx.h"
+	"flash.h"
+	"message.h"
+	"coin.h"
+
+1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.h
+	"sdl_engine.h"
+	<stdlib.h>
+	<time.h>
+
+1587053876 c:\users\ngoc nguyen\desktop\flappybirdreborn\scoreboard.h
+	"sdl_engine.h"
+	<sstream>
+	<string>
+	<cmath>
+
+1586855225 c:\users\ngoc nguyen\desktop\flappybirdreborn\sfx.h
+	"sdl_engine.h"
+
+1586927250 c:\users\ngoc nguyen\desktop\flappybirdreborn\flash.h
+	"sdl_engine.h"
+
+1586713313 c:\users\ngoc nguyen\desktop\flappybirdreborn\message.h
+	"sdl_engine.h"
+
+1586930900 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flash.cpp
+	"flash.h"
+
+1586766886 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\icon.rc
+
+1586924117 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\main.cpp
+	"flappy_bird.h"
+
+1586703755 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\menu.cpp
+	"menu.h"
+
+1586703183 c:\users\ngoc nguyen\desktop\flappybirdreborn\menu.h
+	"sdl_engine.h"
+
+1586930903 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\message.cpp
+	"message.h"
+
+1586930907 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.cpp
+	"pipe.h"
+
+1587053879 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\scoreboard.cpp
+	"scoreboard.h"
+
+1587053455 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\sdl_engine.cpp
+	"sdl_engine.h"
+
+1586855246 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\sfx.cpp
+	"sfx.h"
+

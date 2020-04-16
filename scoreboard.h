@@ -1,7 +1,7 @@
 #ifndef SCOREBOARD_H
 #define SCOREBOARD_H
 
-#include "sdl_engine.h";
+#include "sdl_engine.h"
 #include <sstream>
 #include <string>
 #include <cmath>

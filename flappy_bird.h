@@ -30,12 +30,12 @@ public:
     void game_loop();
     void game_over();
     void display();
-    void frameDelay();
     void resInit();
     void resGen();
     void resDestroy();
     void baseCollision();
     void nextLevel();
+    void framerateControl();
 private:
     bool lose = false;
     bool gameQuit = false;
@@ -71,10 +71,10 @@ private:
     int delay = 60;
     int randNum;
 
-    int frameNum = 1;
-
     int mouseX;
     int mouseY;
+
+    int frameNum = 1;
 };
 
 #endif // FLAPPY_BIRD_H

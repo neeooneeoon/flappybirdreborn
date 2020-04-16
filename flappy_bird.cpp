@@ -80,7 +80,7 @@ void FlappyBird::getReady()
         bird.aniUpdate();
         message.display(renderer);
         SDL_RenderPresent(renderer);
-        frameDelay();
+        framerateControl();
     }
     game_loop();
 }
@@ -127,11 +127,10 @@ void FlappyBird::game_loop()
             }
         }
         bird.update();
-        bird.aniUpdate();
         bird.status(lose);
         nextLevel();
         baseCollision();
-        frameDelay();
+        framerateControl();
         display();
     }
     if(gameQuit == false)
@@ -149,7 +148,6 @@ void FlappyBird::game_over()
     while(bird.dstrect.y<1000)
     {
         bird.update();
-        bird.aniUpdate();
         bird.status(lose);
         SDL_RenderClear(renderer);
         background.display(renderer, config.multiplier);
@@ -157,7 +155,7 @@ void FlappyBird::game_over()
         resGen();
         bird.display(renderer);
         flash.displayNoAlpha(renderer);
-        frameDelay();
+        framerateControl();
         SDL_RenderPresent(renderer);
     }
 }
@@ -171,16 +169,6 @@ void FlappyBird::display()
     bird.display(renderer);
     scoreboard.display(renderer, bird.dstrect.y, scoreboard.dstrect.y);
     SDL_RenderPresent(renderer);
-}
-
-void FlappyBird::frameDelay(){
-    if(frameNum == 3){
-        SDL_Delay(20);
-        frameNum = 1;
-    }else{
-        SDL_Delay(22);
-        frameNum++;
-    }
 }
 
 void FlappyBird::resInit()
@@ -275,5 +263,15 @@ void FlappyBird::nextLevel()
     if(score>=20)
     {
         config.multiplier = 2;
+    }
+}
+
+void FlappyBird::framerateControl(){
+    if(frameNum == 3){
+        SDL_Delay(20);
+        frameNum = 1;
+    }else{
+        SDL_Delay(22);
+        frameNum++;
     }
 }
