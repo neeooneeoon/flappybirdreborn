@@ -3,6 +3,7 @@
 
 #include "sdl_engine.h"
 #include "config.h"
+#include "bird.h"
 
 using namespace std;
 

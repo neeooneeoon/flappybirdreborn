@@ -13,12 +13,14 @@ public:
     SDL_Rect dstrect;
 
     void select();
-    void init(SDL_Renderer* renderer);
+    void loadPNG(SDL_Renderer* renderer);
+    void initCasual();
     void display(SDL_Renderer* renderer);
     void update();
     void keyUpdate();
     void aniUpdate();
     void status(bool &close);
+    void collideBase(SDL_Rect rect1, SDL_Rect rect2, bool &lose);
     void destroy();
 private:
     char* path = "sprites\\yellowBird.png";

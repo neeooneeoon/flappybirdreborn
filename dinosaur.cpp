@@ -1,8 +1,8 @@
-#include "flappy_bird.h"
+#include "dinosaur.h"
 
 using namespace std;
 
-void FlappyBird::init()
+void Dinosaur::init()
 {
     initSDL(window, renderer, SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE);
     bird.loadPNG(renderer);
@@ -16,7 +16,7 @@ void FlappyBird::init()
     resInit();
 }
 
-void FlappyBird::quit()
+void Dinosaur::quit()
 {
     bird.destroy();
     background.destroy();
@@ -28,7 +28,7 @@ void FlappyBird::quit()
     quitSDL(window, renderer);
 }
 
-void FlappyBird::getReady()
+void Dinosaur::getReady()
 {
     while(menuLoop == true)
     {
@@ -83,7 +83,7 @@ void FlappyBird::getReady()
     gameLoop();
 }
 
-void FlappyBird::gameLoop()
+void Dinosaur::gameLoop()
 {
     while(!lose)
     {
@@ -119,7 +119,7 @@ void FlappyBird::gameLoop()
                 }
             }
         }
-        bird.update();
+        bird.aniUpdate();
         bird.status(lose);
         config.nextLevel(score);
         bird.collideBase(base.rect1, base.rect2, lose);
@@ -132,7 +132,7 @@ void FlappyBird::gameLoop()
     }
 }
 
-void FlappyBird::gameOver()
+void Dinosaur::gameOver()
 {
     config.multiplier = 0;
     sfx.playHit();
@@ -155,7 +155,7 @@ void FlappyBird::gameOver()
     }
 }
 
-void FlappyBird::display()
+void Dinosaur::display()
 {
     SDL_RenderClear(renderer);
 
@@ -168,7 +168,7 @@ void FlappyBird::display()
     SDL_RenderPresent(renderer);
 }
 
-void FlappyBird::resInit()
+void Dinosaur::resInit()
 {
     randNum = rand() % 2;
     for(int i=0; i<6; i++)
@@ -187,7 +187,7 @@ void FlappyBird::resInit()
     }
 }
 
-void FlappyBird::resGen()
+void Dinosaur::resGen()
 {
     if(delay>0)
     {
@@ -237,7 +237,7 @@ void FlappyBird::resGen()
     }
 }
 
-void FlappyBird::resDestroy()
+void Dinosaur::resDestroy()
 {
     for(int i=0; i<6; i++)
     {

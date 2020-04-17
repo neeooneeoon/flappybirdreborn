@@ -15,19 +15,20 @@
 	<SDL_TTF.h>
 	<SDL_mixer.h>
 
-1587056541 c:\users\ngoc nguyen\desktop\flappybirdreborn\config.h
+1587089495 c:\users\ngoc nguyen\desktop\flappybirdreborn\config.h
 
-1586930887 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\base.cpp
+1587089939 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\base.cpp
 	"base.h"
 
-1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\base.h
+1587089944 c:\users\ngoc nguyen\desktop\flappybirdreborn\base.h
 	"sdl_engine.h"
 	"config.h"
-
-1587053419 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\bird.cpp
 	"bird.h"
 
-1586708107 c:\users\ngoc nguyen\desktop\flappybirdreborn\bird.h
+1587098155 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\bird.cpp
+	"bird.h"
+
+1587098188 c:\users\ngoc nguyen\desktop\flappybirdreborn\bird.h
 	"sdl_engine.h"
 	<stdlib.h>
 	<time.h>
@@ -40,10 +41,10 @@
 	<time.h>
 	"sdl_engine.h"
 
-1587055852 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
+1587100670 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
-1587056551 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
+1587096892 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
 	<string>
 	<stdlib.h>
 	<time.h>
@@ -53,10 +54,10 @@
 	"base.h"
 	"pipe.h"
 	"scoreboard.h"
-	"sfx.h"
-	"flash.h"
 	"message.h"
 	"coin.h"
+	"sfx.h"
+	"flash.h"
 
 1586610532 c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.h
 	"sdl_engine.h"
@@ -83,8 +84,9 @@
 
 1586766886 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\icon.rc
 
-1586924117 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\main.cpp
+1587098779 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\main.cpp
 	"flappy_bird.h"
+	"dinosaur.h"
 
 1586703755 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\menu.cpp
 	"menu.h"
@@ -106,4 +108,40 @@
 
 1586855246 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\sfx.cpp
 	"sfx.h"
+
+1587088933 c:\users\ngoc nguyen\desktop\flappybirdreborn\resctrl.h
+	"coin.h"
+	"pipe.h"
+	"scoreboard.h"
+	"bird.h"
+	"sdl_engine.h"
+	"background.h"
+	"base.h"
+	"sfx.h"
+	"flash.h"
+	"message.h"
+
+1587088400 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\resctrl.cpp
+	"resCtrl.h"
+
+1587089610 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\config.cpp
+	"config.h"
+
+1587098567 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\dinosaur.cpp
+	"dinosaur.h"
+
+1587097712 c:\users\ngoc nguyen\desktop\flappybirdreborn\dinosaur.h
+	<string>
+	<stdlib.h>
+	<time.h>
+	"sdl_engine.h"
+	"bird.h"
+	"background.h"
+	"base.h"
+	"pipe.h"
+	"scoreboard.h"
+	"message.h"
+	"coin.h"
+	"sfx.h"
+	"flash.h"
 

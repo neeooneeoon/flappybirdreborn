@@ -39,7 +39,10 @@
 		<Unit filename="bird.h" />
 		<Unit filename="coin.cpp" />
 		<Unit filename="coin.h" />
+		<Unit filename="config.cpp" />
 		<Unit filename="config.h" />
+		<Unit filename="dinosaur.cpp" />
+		<Unit filename="dinosaur.h" />
 		<Unit filename="flappy_bird.cpp" />
 		<Unit filename="flappy_bird.h" />
 		<Unit filename="flash.cpp" />

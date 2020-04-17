@@ -1,5 +1,5 @@
-#ifndef FLAPPY_BIRD_H
-#define FLAPPY_BIRD_H
+#ifndef DINOSAUR_H
+#define DINOSAUR_H
 
 #include <string>
 #include <stdlib.h>
@@ -18,7 +18,7 @@
 
 using namespace std;
 
-class FlappyBird
+class Dinosaur
 {
 public:
     void init();
@@ -70,4 +70,4 @@ private:
     bool scoreStatus[6];
 };
 
-#endif // FLAPPY_BIRD_H
+#endif // DINOSAUR_H

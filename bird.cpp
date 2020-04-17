@@ -14,11 +14,15 @@ void Bird::select()
         path = "sprites\\blueBird.png";
 }
 
-void Bird::init(SDL_Renderer* renderer)
+void Bird::loadPNG(SDL_Renderer* renderer)
 {
     select();
     loadSprites(surface, texture, renderer, path);
     SDL_QueryTexture(texture, NULL, NULL, &dstrect.w, &dstrect.h);
+
+}
+
+void Bird::initCasual(){
     srcrect = {0,25,34,24};
     dstrect.w = 34*sizeMultiplier;
     dstrect.h = 24*sizeMultiplier;
@@ -102,6 +106,15 @@ void Bird::keyUpdate()
     velocity = 9.8;
     angle = -20;
     hold = 15;
+}
+
+void Bird::collideBase(SDL_Rect rect1, SDL_Rect rect2, bool &lose)
+{
+    if(collisionCheck(dstrect, rect1)
+            || collisionCheck(dstrect, rect2))
+    {
+        lose = true;
+    }
 }
 
 void Bird::destroy()
