@@ -9,13 +9,17 @@ class Message{
 public:
     void init(SDL_Renderer* renderer);
     void display(SDL_Renderer* renderer);
+    void displayGameOver(SDL_Renderer* renderer);
     void destroy();
 private:
-    char* path = "sprites\\menu_message.png";
+    char* menuPath = "sprites\\menu_message.png";
+    char* gameOverPath = "sprites\\gameover_message.png";
     SDL_Surface* surface;
-    SDL_Texture* texture;
+    SDL_Texture* menu;
+    SDL_Texture* gameOver;
     SDL_Rect srcrect;
     SDL_Rect dstrect;
+    SDL_Rect gameOverRect;
 
     bool readyBlink = true;
     int blinkDelay = 20;

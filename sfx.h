@@ -14,6 +14,7 @@ public:
     void playHit();
     void playDie();
     void playCoin();
+    void playLevelUp();
     void close();
 private:
     Mix_Chunk* wing = NULL;
@@ -22,6 +23,7 @@ private:
     Mix_Chunk* hit = NULL;
     Mix_Chunk* die = NULL;
     Mix_Chunk* coin = NULL;
+    Mix_Chunk* levelUp = NULL;
 };
 
 #endif // SFX_H

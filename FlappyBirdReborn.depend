@@ -145,3 +145,135 @@
 	"sfx.h"
 	"flash.h"
 
+1587109818 source:h:\flappybirdreborn\background.cpp
+	"background.h"
+
+1587109818 h:\flappybirdreborn\background.h
+	"sdl_engine.h"
+	"config.h"
+	<stdlib.h>
+	<time.h>
+
+1587109818 h:\flappybirdreborn\sdl_engine.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_TTF.h>
+	<SDL_mixer.h>
+
+1587116050 h:\flappybirdreborn\config.h
+
+1587109818 source:h:\flappybirdreborn\base.cpp
+	"base.h"
+
+1587109818 h:\flappybirdreborn\base.h
+	"sdl_engine.h"
+	"config.h"
+	"bird.h"
+
+1587109818 h:\flappybirdreborn\bird.h
+	"sdl_engine.h"
+	<stdlib.h>
+	<time.h>
+
+1587109818 source:h:\flappybirdreborn\bird.cpp
+	"bird.h"
+
+1587109818 source:h:\flappybirdreborn\coin.cpp
+	"coin.h"
+
+1587109818 h:\flappybirdreborn\coin.h
+	<stdlib.h>
+	<time.h>
+	"sdl_engine.h"
+
+1587109818 source:h:\flappybirdreborn\config.cpp
+	"config.h"
+
+1587116100 source:h:\flappybirdreborn\dinosaur.cpp
+	"dinosaur.h"
+
+1587109818 h:\flappybirdreborn\dinosaur.h
+	<string>
+	<stdlib.h>
+	<time.h>
+	"sdl_engine.h"
+	"bird.h"
+	"background.h"
+	"base.h"
+	"pipe.h"
+	"scoreboard.h"
+	"message.h"
+	"coin.h"
+	"sfx.h"
+	"flash.h"
+
+1587112944 h:\flappybirdreborn\pipe.h
+	"sdl_engine.h"
+	<stdlib.h>
+	<time.h>
+
+1587118268 h:\flappybirdreborn\scoreboard.h
+	"sdl_engine.h"
+	<sstream>
+	<string>
+	<cmath>
+
+1587112030 h:\flappybirdreborn\message.h
+	"sdl_engine.h"
+
+1587115880 h:\flappybirdreborn\sfx.h
+	"sdl_engine.h"
+
+1587109818 h:\flappybirdreborn\flash.h
+	"sdl_engine.h"
+
+1587116310 source:h:\flappybirdreborn\flappy_bird.cpp
+	"flappy_bird.h"
+
+1587119548 h:\flappybirdreborn\flappy_bird.h
+	<string>
+	<stdlib.h>
+	<time.h>
+	<cstdint>
+	"sdl_engine.h"
+	"bird.h"
+	"background.h"
+	"base.h"
+	"pipe.h"
+	"scoreboard.h"
+	"message.h"
+	"coin.h"
+	"sfx.h"
+	"flash.h"
+
+1587109818 source:h:\flappybirdreborn\flash.cpp
+	"flash.h"
+
+1587109818 source:h:\flappybirdreborn\icon.rc
+
+1587109818 source:h:\flappybirdreborn\main.cpp
+	"flappy_bird.h"
+	"dinosaur.h"
+
+1587109818 source:h:\flappybirdreborn\menu.cpp
+	"menu.h"
+
+1587109818 h:\flappybirdreborn\menu.h
+	"sdl_engine.h"
+
+1587119254 source:h:\flappybirdreborn\message.cpp
+	"message.h"
+
+1587112934 source:h:\flappybirdreborn\pipe.cpp
+	"pipe.h"
+
+1587119250 source:h:\flappybirdreborn\scoreboard.cpp
+	"scoreboard.h"
+
+1587117570 source:h:\flappybirdreborn\sdl_engine.cpp
+	"sdl_engine.h"
+
+1587115932 source:h:\flappybirdreborn\sfx.cpp
+	"sfx.h"
+

@@ -3,13 +3,12 @@
 
 using namespace std;
 
-class Config{
+class Config
+{
 public:
     double multiplier = 1;
     double threshold = 4;
     int frameNum = 1;
-
-    void nextLevel(int &score);
 };
 
 #endif // CONFIG_H

@@ -15,7 +15,8 @@ public:
     void loadRed(SDL_Renderer* renderer);
     void getRandomLength();
     void init(SDL_Renderer* renderer, int pos);
-    void display(SDL_Renderer* renderer, int multiplier);
+    void display(SDL_Renderer* renderer);
+    void update(int multiplier);
     void destroy();
 private:
     int randNum;

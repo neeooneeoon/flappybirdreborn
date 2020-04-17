@@ -30,6 +30,7 @@ void FlappyBird::quit()
 
 void FlappyBird::getReady()
 {
+    sfx.playSwoosh();
     while(menuLoop == true)
     {
         while(SDL_PollEvent(&event))
@@ -63,11 +64,17 @@ void FlappyBird::getReady()
                 case SDL_SCANCODE_UP:
                 case SDL_SCANCODE_SPACE:
                 case SDL_BUTTON_LEFT:
-                    bird.update();
-                    bird.keyUpdate();
-                    menuLoop = false;
+                    if(keyPressed==false)
+                    {
+                        bird.update();
+                        bird.keyUpdate();
+                        menuLoop = false;
+                        keyPressed = true;
+                    }
+
                     break;
                 default:
+                    keyPressed = false;
                     break;
                 }
             }
@@ -111,17 +118,23 @@ void FlappyBird::gameLoop()
                 case SDL_SCANCODE_W:
                 case SDL_SCANCODE_UP:
                 case SDL_SCANCODE_SPACE:
-                    bird.keyUpdate();
-                    sfx.playWing();
+                    if(keyPressed ==false)
+                    {
+                        bird.keyUpdate();
+                        sfx.playWing();
+                    }
+                    else
+                        keyPressed = false;
                     break;
                 default:
+                    keyPressed = false;
                     break;
                 }
             }
         }
         bird.update();
         bird.status(lose);
-        config.nextLevel(score);
+        nextLevel();
         bird.collideBase(base.rect1, base.rect2, lose);
         framerateControl(config.frameNum);
         display();
@@ -153,6 +166,29 @@ void FlappyBird::gameOver()
         framerateControl(config.frameNum);
         SDL_RenderPresent(renderer);
     }
+    sfx.playSwoosh();
+    while(gameQuit==false)
+    {
+
+        SDL_RenderClear(renderer);
+
+        background.display(renderer, config.multiplier);
+        base.display(renderer, config.multiplier);
+        for(int i=0; i<6; i++)
+        {
+            if(coinStatus[i]==true && coinRandom[i]==1)
+            {
+                coin[i].display(renderer);
+            }
+            pipe[i].display(renderer);
+        }
+        message.displayGameOver(renderer);
+        scoreboard.miniDisplay(renderer);
+
+
+        framerateControl(config.frameNum);
+        SDL_RenderPresent(renderer);
+    }
 }
 
 void FlappyBird::display()
@@ -163,7 +199,7 @@ void FlappyBird::display()
     base.display(renderer, config.multiplier);
     resGen();
     bird.display(renderer);
-    scoreboard.display(renderer, bird.dstrect.y, scoreboard.dstrect.y);
+    scoreboard.display(renderer, bird.dstrect.y);
 
     SDL_RenderPresent(renderer);
 }
@@ -227,7 +263,8 @@ void FlappyBird::resGen()
                 scoreStatus[i] = true;
                 scoreboard.update(score);
             }
-            pipe[i].display(renderer, config.multiplier);
+            pipe[i].display(renderer);
+            pipe[i].update(config.multiplier);
             coin[i].updatePos(config.multiplier);
             if(coinStatus[i]==true && coinRandom[i]==1)
             {
@@ -245,6 +282,16 @@ void FlappyBird::resDestroy()
         coin[i].destroy();
     }
     scoreboard.destroy();
+}
+
+void FlappyBird::nextLevel()
+{
+    if(score>=20 && level2==false)
+    {
+        config.multiplier = 2;
+        sfx.playLevelUp();
+        level2 = true;
+    }
 }
 
 

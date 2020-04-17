@@ -11,7 +11,8 @@ using namespace std;
 class Scoreboard{
 public:
     void init(SDL_Renderer* renderer);
-    void display(SDL_Renderer* renderer, int birdY, int scoreboardY);
+    void display(SDL_Renderer* renderer, int birdY);
+    void miniDisplay(SDL_Renderer* renderer);
     void update(int score);
     void destroy();
     void getNum(char num);
@@ -23,6 +24,7 @@ private:
     SDL_Surface *surface = NULL;
     SDL_Texture *texture = NULL;
     int anchor = 640; //step = 36; x
+    int miniPos = -120;
     stringstream ss;
     string scoreStr;
     bool updateScr = false;

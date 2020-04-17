@@ -7,6 +7,7 @@ void SFX::init(){
     hit = Mix_LoadWAV("sounds\\hit.wav");
     die = Mix_LoadWAV("sounds\\die.wav");
     coin = Mix_LoadWAV("sounds\\coin.wav");
+    levelUp = Mix_LoadWAV("sounds\\levelup.wav");
 }
 
 void SFX::playWing(){
@@ -31,6 +32,10 @@ void SFX::playDie(){
 
 void SFX::playCoin(){
     Mix_PlayChannel(-1, coin,0);
+}
+
+void SFX::playLevelUp(){
+    Mix_PlayChannel(-1, levelUp, 0);
 }
 
 void SFX::close(){

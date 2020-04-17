@@ -22,10 +22,14 @@ void Pipe::init(SDL_Renderer* renderer, int pos){
     dstrectUp = {1280+pos, 0, 52, 600-length-170};
 }
 
-void Pipe::display(SDL_Renderer* renderer, int multiplier){
+void Pipe::display(SDL_Renderer* renderer){
     SDL_RenderCopy(renderer, texture, &srcrectDown, &dstrectDown);
     SDL_RenderCopyEx(renderer, texture, &srcrectUp, &dstrectUp,
                      upAngle, center, flip);
+
+}
+
+void Pipe::update(int multiplier){
     dstrectDown.x -= 4 * multiplier;
     dstrectUp.x -= 4 * multiplier;
 }

@@ -4,6 +4,7 @@
 #include <string>
 #include <stdlib.h>
 #include <time.h>
+#include <cstdint>
 
 #include "sdl_engine.h"
 #include "bird.h"
@@ -30,10 +31,11 @@ public:
     void resInit();
     void resGen();
     void resDestroy();
+    void nextLevel();
 private:
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    string WINDOW_TITLE = "Flappy Bird SDL - Build 170420";
+    string WINDOW_TITLE = "Flappy Bird Reborn - Build 170420";
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -42,6 +44,8 @@ private:
     bool lose = false;
     bool gameQuit = false;
     bool menuLoop = true;
+    bool keyPressed = false;
+    bool level2 = false;
 
     int mouseX;
     int mouseY;
@@ -58,16 +62,16 @@ private:
     Flash flash;
     Message message;
 
-    Pipe pipe[6];
+    Pipe pipe[7];
 
-    Coin coin[6];
-    bool coinStatus[6];
-    int coinRandom[6];
+    Coin coin[7];
+    bool coinStatus[7];
+    int coinRandom[7];
 
     Scoreboard scoreboard;
     int score = 0;
     int highscore = 0;
-    bool scoreStatus[6];
+    bool scoreStatus[7];
 };
 
 #endif // FLAPPY_BIRD_H

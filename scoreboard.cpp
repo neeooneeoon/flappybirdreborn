@@ -6,7 +6,6 @@ void Scoreboard::init(SDL_Renderer* renderer)
 {
     loadSprites(surface, texture, renderer, path);
     SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
-    SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 
     ss.str("");
     ss << 0;
@@ -50,9 +49,9 @@ void Scoreboard::getNum(char num)
     }
 }
 
-void Scoreboard::display(SDL_Renderer* renderer, int birdY, int scoreboardY)
+void Scoreboard::display(SDL_Renderer* renderer, int birdY)
 {
-    if(abs(birdY-scoreboardY<=50)){
+    if(abs(birdY-dstrect.y<=50)){
         alphaVal = 100;
     }else{
         alphaVal = 255;
@@ -71,6 +70,34 @@ void Scoreboard::display(SDL_Renderer* renderer, int birdY, int scoreboardY)
         {
             dstrect = {anchor, 120, 24, 36};
             anchor += 24 + 5;
+        }
+        SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);
+    }
+}
+
+void Scoreboard::miniDisplay(SDL_Renderer* renderer)
+{
+    if(miniPos<320)
+    {
+        SDL_SetTextureAlphaMod(texture, 80);
+        miniPos += 20;
+        SDL_Delay(1);
+        SDL_SetTextureAlphaMod(texture, 255);
+        miniPos += 20;
+    }
+    anchor = 773;
+    for(int i=scoreStr.length()-1; i>=0; i--)
+    {
+        getNum(scoreStr[i]);
+        if(scoreStr[i]=='1')
+        {
+            anchor -= 8+2;
+            dstrect = {anchor, miniPos, 8, 18};
+        }
+        else
+        {
+            anchor -= 12+2;
+            dstrect = {anchor, miniPos, 12, 18};
         }
         SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);
     }

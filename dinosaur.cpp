@@ -121,7 +121,7 @@ void Dinosaur::gameLoop()
         }
         bird.aniUpdate();
         bird.status(lose);
-        config.nextLevel(score);
+        //nextLevel();
         bird.collideBase(base.rect1, base.rect2, lose);
         framerateControl(config.frameNum);
         display();
@@ -163,7 +163,7 @@ void Dinosaur::display()
     base.display(renderer, config.multiplier);
     resGen();
     bird.display(renderer);
-    scoreboard.display(renderer, bird.dstrect.y, scoreboard.dstrect.y);
+    scoreboard.display(renderer, bird.dstrect.y);
 
     SDL_RenderPresent(renderer);
 }
@@ -227,7 +227,7 @@ void Dinosaur::resGen()
                 scoreStatus[i] = true;
                 scoreboard.update(score);
             }
-            pipe[i].display(renderer, config.multiplier);
+            pipe[i].display(renderer);
             coin[i].updatePos(config.multiplier);
             if(coinStatus[i]==true && coinRandom[i]==1)
             {
