@@ -9,9 +9,8 @@
 			<Target title="Debug">
 				<Option output="bin/Debug/FlappyBirdReborn" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
-				<Option type="1" />
+				<Option type="0" />
 				<Option compiler="gcc" />
-				<Option use_console_runner="0" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -50,11 +49,17 @@
 		<Unit filename="icon.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="indicator.cpp" />
+		<Unit filename="indicator.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="medal.cpp" />
+		<Unit filename="medal.h" />
 		<Unit filename="message.cpp" />
 		<Unit filename="message.h" />
 		<Unit filename="pipe.cpp" />
 		<Unit filename="pipe.h" />
+		<Unit filename="saves.cpp" />
+		<Unit filename="saves.h" />
 		<Unit filename="scoreboard.cpp" />
 		<Unit filename="scoreboard.h" />
 		<Unit filename="sdl_engine.cpp" />

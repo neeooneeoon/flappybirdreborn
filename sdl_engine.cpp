@@ -77,6 +77,16 @@ bool collisionCheck(SDL_Rect &rect1, SDL_Rect &rect2)
     return SDL_HasIntersection(&rect1, &rect2);
 }
 
+bool mouseInRect(SDL_Rect &rect, int x, int y)
+{
+    return((x>=rect.x && x<=rect.x+rect.w) && (y>=rect.y && y<=rect.y+rect.h));
+}
+
+bool mouseParRect(SDL_Rect &rect, int y)
+{
+    return (y>=rect.y && y<=rect.y+rect.h);
+}
+
 void framerateControl(int &frameNum)
 {
     if(frameNum == 3)

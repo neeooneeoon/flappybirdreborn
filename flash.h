@@ -5,7 +5,8 @@
 
 using namespace std;
 
-class Flash{
+class Flash
+{
 public:
     void init(SDL_Renderer* renderer);
     void display(SDL_Renderer* renderer);
@@ -18,7 +19,6 @@ private:
     SDL_Surface *surface = NULL;
     char* path = "sprites\\white.png";
     SDL_Rect rect;
-
 };
 
 #endif

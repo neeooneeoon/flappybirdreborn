@@ -17,6 +17,7 @@
 #include "sfx.h"
 #include "flash.h"
 #include "text.h"
+#include "indicator.h"
 
 using namespace std;
 
@@ -46,6 +47,7 @@ private:
 
     bool lose = false;
     bool gameQuit = false;
+    bool realQuit = false;
     bool menuLoop = true;
     bool getReadyLoop = true;
     bool level2 = false;
@@ -66,6 +68,7 @@ private:
     Flash flash;
     Message message;
     Text text;
+    Indicator indicator;
 
     Pipe pipe[7];
 
