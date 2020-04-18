@@ -44,6 +44,13 @@ void Message::display(SDL_Renderer* renderer)
     }
 }
 
+void Message::displayMenu(SDL_Renderer* renderer)
+{
+    srcrect = {0,51,178,48};
+    dstrect = {1070, 25, 178, 48};
+    SDL_RenderCopy(renderer, menu, &srcrect, &dstrect);
+}
+
 void Message::displayGameOver(SDL_Renderer* renderer){
     if(gameOverRect.y<180){
         SDL_SetTextureAlphaMod(gameOver, 80);

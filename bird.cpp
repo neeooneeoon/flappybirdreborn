@@ -27,6 +27,11 @@ void Bird::initCasual(){
     dstrect.w = 34*sizeMultiplier;
     dstrect.h = 24*sizeMultiplier;
     dstrect = {(1280 - dstrect.w) /2, (720 - dstrect.h) /2, 34*2, 24*2};
+    speed = 500;
+    velocity = 0;
+    delay = 0;
+    angle = 0;
+    hold = 0;
 }
 
 void Bird::display(SDL_Renderer* renderer)

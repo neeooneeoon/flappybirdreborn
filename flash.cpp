@@ -4,6 +4,7 @@ using namespace std;
 
 void Flash::init(SDL_Renderer *renderer){
     loadSprites(surface, texture, renderer, path);
+    alpha = 100;
 }
 
 void Flash::display(SDL_Renderer* renderer){

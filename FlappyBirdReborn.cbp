@@ -11,6 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -50,8 +51,6 @@
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="main.cpp" />
-		<Unit filename="menu.cpp" />
-		<Unit filename="menu.h" />
 		<Unit filename="message.cpp" />
 		<Unit filename="message.h" />
 		<Unit filename="pipe.cpp" />
@@ -62,6 +61,8 @@
 		<Unit filename="sdl_engine.h" />
 		<Unit filename="sfx.cpp" />
 		<Unit filename="sfx.h" />
+		<Unit filename="text.cpp" />
+		<Unit filename="text.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

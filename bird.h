@@ -28,11 +28,11 @@ private:
     SDL_Surface *surface = NULL;
     SDL_Rect srcrect;
     double sizeMultiplier = 1.2;
+    int flapStatus = 2; //1-up 2-mid 3-down
+    bool flapReversed = false;
     int speed = 500;
     int velocity = 0;
     int delay = 0;
-    int flapStatus = 2; //1-up 2-mid 3-down
-    bool flapReversed = false;
     double angle = 0;
     int hold = 0;
     SDL_Point* center = NULL;

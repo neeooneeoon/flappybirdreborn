@@ -16,6 +16,7 @@
 #include "coin.h"
 #include "sfx.h"
 #include "flash.h"
+#include "text.h"
 
 using namespace std;
 
@@ -24,6 +25,8 @@ class FlappyBird
 public:
     void init();
     void quit();
+    void reset();
+    void menu();
     void getReady();
     void gameLoop();
     void gameOver();
@@ -35,7 +38,7 @@ public:
 private:
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    string WINDOW_TITLE = "Flappy Bird Reborn - Build 170420";
+    string WINDOW_TITLE = "Flappy Bird Reborn - Build 180420";
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -44,8 +47,9 @@ private:
     bool lose = false;
     bool gameQuit = false;
     bool menuLoop = true;
-    bool keyPressed = false;
+    bool getReadyLoop = true;
     bool level2 = false;
+    bool casual = false;
 
     int mouseX;
     int mouseY;
@@ -61,6 +65,7 @@ private:
     SFX sfx;
     Flash flash;
     Message message;
+    Text text;
 
     Pipe pipe[7];
 

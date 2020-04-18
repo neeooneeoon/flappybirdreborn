@@ -10,6 +10,7 @@ public:
     void init(SDL_Renderer* renderer);
     void display(SDL_Renderer* renderer);
     void displayGameOver(SDL_Renderer* renderer);
+    void displayMenu(SDL_Renderer* renderer);
     void destroy();
 private:
     char* menuPath = "sprites\\menu_message.png";

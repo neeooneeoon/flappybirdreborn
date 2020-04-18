@@ -10,6 +10,9 @@ void Scoreboard::init(SDL_Renderer* renderer)
     ss.str("");
     ss << 0;
     scoreStr = ss.str();
+
+    anchor = 640;
+    miniPos = -120;
 }
 
 void Scoreboard::getNum(char num)

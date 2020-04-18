@@ -171,12 +171,12 @@
 	"config.h"
 	"bird.h"
 
-1587109818 h:\flappybirdreborn\bird.h
+1587192040 h:\flappybirdreborn\bird.h
 	"sdl_engine.h"
 	<stdlib.h>
 	<time.h>
 
-1587109818 source:h:\flappybirdreborn\bird.cpp
+1587199820 source:h:\flappybirdreborn\bird.cpp
 	"bird.h"
 
 1587109818 source:h:\flappybirdreborn\coin.cpp
@@ -219,19 +219,19 @@
 	<string>
 	<cmath>
 
-1587112030 h:\flappybirdreborn\message.h
+1587139128 h:\flappybirdreborn\message.h
 	"sdl_engine.h"
 
 1587115880 h:\flappybirdreborn\sfx.h
 	"sdl_engine.h"
 
-1587109818 h:\flappybirdreborn\flash.h
+1587199848 h:\flappybirdreborn\flash.h
 	"sdl_engine.h"
 
-1587116310 source:h:\flappybirdreborn\flappy_bird.cpp
+1587199350 source:h:\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
-1587119548 h:\flappybirdreborn\flappy_bird.h
+1587191070 h:\flappybirdreborn\flappy_bird.h
 	<string>
 	<stdlib.h>
 	<time.h>
@@ -246,23 +246,24 @@
 	"coin.h"
 	"sfx.h"
 	"flash.h"
+	"text.h"
 
-1587109818 source:h:\flappybirdreborn\flash.cpp
+1587199514 source:h:\flappybirdreborn\flash.cpp
 	"flash.h"
 
 1587109818 source:h:\flappybirdreborn\icon.rc
 
-1587109818 source:h:\flappybirdreborn\main.cpp
+1587138126 source:h:\flappybirdreborn\main.cpp
 	"flappy_bird.h"
 	"dinosaur.h"
 
 1587109818 source:h:\flappybirdreborn\menu.cpp
 	"menu.h"
 
-1587109818 h:\flappybirdreborn\menu.h
+1587137100 h:\flappybirdreborn\menu.h
 	"sdl_engine.h"
 
-1587119254 source:h:\flappybirdreborn\message.cpp
+1587139258 source:h:\flappybirdreborn\message.cpp
 	"message.h"
 
 1587112934 source:h:\flappybirdreborn\pipe.cpp
@@ -276,4 +277,10 @@
 
 1587115932 source:h:\flappybirdreborn\sfx.cpp
 	"sfx.h"
+
+1587141726 h:\flappybirdreborn\text.h
+	"sdl_engine.h"
+
+1587141964 source:h:\flappybirdreborn\text.cpp
+	"text.h"
 
