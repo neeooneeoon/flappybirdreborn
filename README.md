@@ -6,8 +6,6 @@ Flappy Bird Reborn là game có lối chơi dựa theo game mobile Flappy Bird v
 
 Flappy Bird Reborn is a rendition of Flappy Bird - 2014's Mobile Game Hit. It's your favorite mobile game now on PC with updated graphics, more challenges & fun!
 
-![Image Of Flappy Bird Reborn Alpha](https://github.com/neeooneeoon/advprogramming/blob/master/Other/fpp_gif-min.gif)
-
 ## Credits
 - Developer: Ngoc Nguyen
 - SDL2.0's code template from Tran Thi Minh Chau's lecture
