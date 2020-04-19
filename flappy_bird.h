@@ -61,6 +61,7 @@ private:
     int delay = 60;
 
     Config config;
+    Saves saves;
 
     Bird bird;
     Background background;
@@ -80,8 +81,6 @@ private:
     Scoreboard scoreboard;
     int score = 0;
     bool scoreStatus[7];
-
-    Saves saves;
 };
 
 #endif // FLAPPY_BIRD_H

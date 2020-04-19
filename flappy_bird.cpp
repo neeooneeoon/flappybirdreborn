@@ -76,25 +76,25 @@ void FlappyBird::menu()
             case SDL_MOUSEMOTION:
                 mouseX = event.motion.x;
                 mouseY = event.motion.y;
-                if(mouseParRect(text.casualRect,mouseY))
+                if(mouseParRect(text.casualRect,mouseY) && indicator.selected != 1)
                 {
                     sfx.playSelect();
                     indicator.setPosCasual();
                     indicator.selected = 1;
                 }
-                else if(mouseParRect(text.pvpRect,mouseY))
+                else if(mouseParRect(text.pvpRect,mouseY) && indicator.selected != 2)
                 {
                     sfx.playSelect();
                     indicator.setPosPvP();
                     indicator.selected = 2;
                 }
-                else if(mouseParRect(text.dinosaurRect,mouseY))
+                else if(mouseParRect(text.dinosaurRect,mouseY) && indicator.selected != 3)
                 {
                     sfx.playSelect();
                     indicator.setPosDinosaur();
                     indicator.selected = 3;
                 }
-                else if(mouseParRect(text.quitRect,mouseY))
+                else if(mouseParRect(text.quitRect,mouseY) && indicator.selected != 4)
                 {
                     sfx.playSelect();
                     indicator.setPosQuit();
