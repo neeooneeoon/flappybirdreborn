@@ -7,12 +7,25 @@ void Scoreboard::init(SDL_Renderer* renderer)
     loadSprites(surface, texture, renderer, path);
     SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
 
+    medal.init(renderer);
+    newhs.init(renderer);
+
     ss.str("");
     ss << 0;
     scoreStr = ss.str();
 
-    anchor = 640;
-    miniPos = -120;
+    miniScorePos = -120;
+    highscorePos = -120;
+
+    newHighScore = false;
+}
+
+void Scoreboard::update(int score)
+{
+    ss.str("");
+    ss << score;
+    scoreStr = ss.str();
+    medalScore = score;
 }
 
 void Scoreboard::getNum(char num)
@@ -52,11 +65,21 @@ void Scoreboard::getNum(char num)
     }
 }
 
+void Scoreboard::getHighScore(int highscore)
+{
+    ss.str("");
+    ss << highscore;
+    highscoreStr = ss.str();
+}
+
 void Scoreboard::display(SDL_Renderer* renderer, int birdY)
 {
-    if(abs(birdY-dstrect.y<=50)){
+    if(abs(birdY-dstrect.y<=50))
+    {
         alphaVal = 100;
-    }else{
+    }
+    else
+    {
         alphaVal = 255;
     }
     SDL_SetTextureAlphaMod(texture, alphaVal);
@@ -78,15 +101,24 @@ void Scoreboard::display(SDL_Renderer* renderer, int birdY)
     }
 }
 
+void Scoreboard::displayGameOver(SDL_Renderer* renderer)
+{
+    miniDisplay(renderer);
+    highscoreDisplay(renderer);
+}
+
 void Scoreboard::miniDisplay(SDL_Renderer* renderer)
 {
-    if(miniPos<320)
+    if(miniScorePos<320)
     {
         SDL_SetTextureAlphaMod(texture, 80);
-        miniPos += 20;
+        miniScorePos += 20;
         SDL_Delay(1);
         SDL_SetTextureAlphaMod(texture, 255);
-        miniPos += 20;
+        miniScorePos += 20;
+    }else
+    {
+        medal.display(renderer, medalScore);
     }
     anchor = 773;
     for(int i=scoreStr.length()-1; i>=0; i--)
@@ -95,25 +127,55 @@ void Scoreboard::miniDisplay(SDL_Renderer* renderer)
         if(scoreStr[i]=='1')
         {
             anchor -= 8+2;
-            dstrect = {anchor, miniPos, 8, 18};
+            dstrect = {anchor, miniScorePos, 8, 18};
         }
         else
         {
             anchor -= 12+2;
-            dstrect = {anchor, miniPos, 12, 18};
+            dstrect = {anchor, miniScorePos, 12, 18};
         }
         SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);
     }
 }
 
-void Scoreboard::update(int score)
+void Scoreboard::highscoreDisplay(SDL_Renderer* renderer)
 {
-    ss.str("");
-    ss << score;
-    scoreStr = ss.str();
+    if(highscorePos<360)
+    {
+        SDL_SetTextureAlphaMod(texture, 80);
+        highscorePos += 25;
+        SDL_Delay(1);
+        SDL_SetTextureAlphaMod(texture, 255);
+        highscorePos += 25;
+    }
+    else
+    {
+        if(newHighScore == true)
+        {
+            newhs.display(renderer);
+        }
+    }
+    anchor = 773;
+    for(int i=highscoreStr.length()-1; i>=0; i--)
+    {
+        getNum(highscoreStr[i]);
+        if(highscoreStr[i]=='1')
+        {
+            anchor -= 8+2;
+            dstrect = {anchor, highscorePos, 8, 18};
+        }
+        else
+        {
+            anchor -= 12+2;
+            dstrect = {anchor, highscorePos, 12, 18};
+        }
+        SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);
+    }
 }
 
 void Scoreboard::destroy()
 {
     SDL_DestroyTexture(texture);
+    medal.destroy();
+    newhs.destroy();
 }

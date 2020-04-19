@@ -56,6 +56,8 @@
 		<Unit filename="medal.h" />
 		<Unit filename="message.cpp" />
 		<Unit filename="message.h" />
+		<Unit filename="newhs.cpp" />
+		<Unit filename="newhs.h" />
 		<Unit filename="pipe.cpp" />
 		<Unit filename="pipe.h" />
 		<Unit filename="saves.cpp" />

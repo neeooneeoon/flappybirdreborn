@@ -28,6 +28,7 @@ void FlappyBird::quit()
     sfx.close();
     text.destroy();
     indicator.destroy();
+    scoreboard.destroy();
     quitSDL(window, renderer);
 }
 
@@ -79,21 +80,25 @@ void FlappyBird::menu()
                 {
                     sfx.playSelect();
                     indicator.setPosCasual();
+                    indicator.selected = 1;
                 }
                 else if(mouseParRect(text.pvpRect,mouseY))
                 {
                     sfx.playSelect();
                     indicator.setPosPvP();
+                    indicator.selected = 2;
                 }
                 else if(mouseParRect(text.dinosaurRect,mouseY))
                 {
                     sfx.playSelect();
                     indicator.setPosDinosaur();
+                    indicator.selected = 3;
                 }
                 else if(mouseParRect(text.quitRect,mouseY))
                 {
                     sfx.playSelect();
                     indicator.setPosQuit();
+                    indicator.selected = 4;
                 }
                 break;
             case SDL_MOUSEBUTTONDOWN:
@@ -284,6 +289,7 @@ void FlappyBird::gameLoop()
 
 void FlappyBird::gameOver()
 {
+    //Gameover Scene
     config.multiplier = 0;
     sfx.playHit();
     flash.display(renderer);
@@ -304,6 +310,21 @@ void FlappyBird::gameOver()
         SDL_RenderPresent(renderer);
     }
     sfx.playSwoosh();
+
+    //Highscore(saves) R/W
+    saves.read();
+    if(casual == true)
+    {
+        if(saves.highscoreCasual<score)
+        {
+            saves.highscoreCasual = score;
+            scoreboard.newHighScore = true;
+        }
+        scoreboard.getHighScore(saves.highscoreCasual);
+    }
+    saves.write();
+
+    //Display Gameover Scoreboard
     while(gameQuit==false)
     {
         while(SDL_PollEvent(&event))
@@ -356,8 +377,7 @@ void FlappyBird::gameOver()
             pipe[i].display(renderer);
         }
         message.displayGameOver(renderer);
-        scoreboard.miniDisplay(renderer);
-
+        scoreboard.displayGameOver(renderer);
 
         framerateControl(config.frameNum);
         SDL_RenderPresent(renderer);

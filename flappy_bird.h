@@ -18,6 +18,7 @@
 #include "flash.h"
 #include "text.h"
 #include "indicator.h"
+#include "saves.h"
 
 using namespace std;
 
@@ -78,8 +79,9 @@ private:
 
     Scoreboard scoreboard;
     int score = 0;
-    int highscore = 0;
     bool scoreStatus[7];
+
+    Saves saves;
 };
 
 #endif // FLAPPY_BIRD_H

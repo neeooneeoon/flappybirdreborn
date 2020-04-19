@@ -10,13 +10,12 @@ class Saves
 public:
     void read();
     void write();
+
+    int highscoreCasual = 0;
+    int highscorePvP = 0;
+    int highscoreDinosaur = 0;
 private:
-    fstream casual;
-    fstream pvp;
-    fstream dinosaur;
-    int highscoreCasual;
-    int highscorePvP;
-    int highscoreDinosaur;
+    fstream savefile;
 };
 
 #endif // SAVES_H

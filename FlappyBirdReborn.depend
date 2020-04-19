@@ -213,8 +213,10 @@
 	<stdlib.h>
 	<time.h>
 
-1587118268 h:\flappybirdreborn\scoreboard.h
+1587294476 h:\flappybirdreborn\scoreboard.h
 	"sdl_engine.h"
+	"medal.h"
+	"newhs.h"
 	<sstream>
 	<string>
 	<cmath>
@@ -228,10 +230,10 @@
 1587206728 h:\flappybirdreborn\flash.h
 	"sdl_engine.h"
 
-1587225878 source:h:\flappybirdreborn\flappy_bird.cpp
+1587293652 source:h:\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
-1587208932 h:\flappybirdreborn\flappy_bird.h
+1587282170 h:\flappybirdreborn\flappy_bird.h
 	<string>
 	<stdlib.h>
 	<time.h>
@@ -248,6 +250,7 @@
 	"flash.h"
 	"text.h"
 	"indicator.h"
+	"saves.h"
 
 1587199514 source:h:\flappybirdreborn\flash.cpp
 	"flash.h"
@@ -270,7 +273,7 @@
 1587112934 source:h:\flappybirdreborn\pipe.cpp
 	"pipe.h"
 
-1587200478 source:h:\flappybirdreborn\scoreboard.cpp
+1587294536 source:h:\flappybirdreborn\scoreboard.cpp
 	"scoreboard.h"
 
 1587206258 source:h:\flappybirdreborn\sdl_engine.cpp
@@ -291,11 +294,21 @@
 1587219234 source:h:\flappybirdreborn\indicator.cpp
 	"indicator.h"
 
-1587228598 source:h:\flappybirdreborn\medal.cpp
+1587294656 source:h:\flappybirdreborn\medal.cpp
+	"medal.h"
 
-1587227882 source:h:\flappybirdreborn\saves.cpp
+1587284708 source:h:\flappybirdreborn\saves.cpp
 	"saves.h"
 
-1587229626 h:\flappybirdreborn\saves.h
+1587284750 h:\flappybirdreborn\saves.h
 	<fstream>
+
+1587293796 h:\flappybirdreborn\medal.h
+	"sdl_engine.h"
+
+1587294482 h:\flappybirdreborn\newhs.h
+	"sdl_engine.h"
+
+1587294448 source:h:\flappybirdreborn\newhs.cpp
+	"newhs.h"
 

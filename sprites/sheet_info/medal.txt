@@ -1,0 +1,4 @@
+medal_bronze = 0 0 22 22
+medal_gold = 23 0 22 22
+medal_platinum = 0 23 22 22
+medal_silver = 23 23 22 22
