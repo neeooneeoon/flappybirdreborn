@@ -13,8 +13,8 @@ public:
     void select(bool up);
     void aniUpdate();
     void setPosCasual();
-    void setPosPvP();
-    void setPosDinosaur();
+    void setPosVersus();
+    void setPosHelp();
     void setPosQuit();
     void destroy();
 
@@ -27,7 +27,7 @@ private:
     int delay = 0;
     int flapStatus = 2;
     bool flapReversed = false;
-    char* path = "sprites\\yellowbird.png";
+    const char* path = "sprites\\yellowbird.png";
 };
 
 #endif // INDICATOR_H

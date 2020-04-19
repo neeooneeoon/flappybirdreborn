@@ -2,7 +2,7 @@
 #define BASE_H
 
 #include "sdl_engine.h"
-#include "config.h"
+
 #include "bird.h"
 
 using namespace std;
@@ -16,7 +16,7 @@ public:
     void display(SDL_Renderer* renderer, int multiplier);
     void destroy();
 private:
-    char* path = "sprites\\base.png";
+    const char* path = "sprites\\base.png";
     SDL_Surface* surface = NULL;
     SDL_Texture* texture = NULL;
 };

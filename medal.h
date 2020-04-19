@@ -12,7 +12,7 @@ public:
     void display(SDL_Renderer* renderer, int score);
     void destroy();
 private:
-    char* path = "sprites\\medal.png";
+    const char* path = "sprites\\medal.png";
     bool scoreReceived = false;
     SDL_Texture *texture;
     SDL_Surface *surface;

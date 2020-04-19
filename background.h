@@ -2,7 +2,6 @@
 #define BACKGROUND_H
 
 #include "sdl_engine.h"
-#include "config.h"
 #include <stdlib.h>
 #include <time.h>
 
@@ -13,7 +12,7 @@ public:
     void display(SDL_Renderer* renderer, int multiplier);
     void destroy();
 private:
-    char* path = "sprites\\dayBackground.png";
+    const char* path = "sprites\\dayBackground.png";
     SDL_Surface* surface = NULL;
     SDL_Texture* texture = NULL;
     SDL_Rect rect1;

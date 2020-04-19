@@ -20,8 +20,8 @@ public:
     void destroy();
 private:
     int randNum;
-    char* greenPath = "sprites\\greenPipe.png";
-    char* redPath = "sprites\\redPipe.png";
+    const char* greenPath = "sprites\\greenPipe.png";
+    const char* redPath = "sprites\\redPipe.png";
     SDL_Texture* texture;
     SDL_Surface* surface;
     SDL_Rect srcrectUp;

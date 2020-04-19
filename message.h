@@ -13,8 +13,8 @@ public:
     void displayMenu(SDL_Renderer* renderer);
     void destroy();
 private:
-    char* menuPath = "sprites\\menu_message.png";
-    char* gameOverPath = "sprites\\gameover_message.png";
+    const char* menuPath = "sprites\\menu_message.png";
+    const char* gameOverPath = "sprites\\gameover_message.png";
     SDL_Surface* surface;
     SDL_Texture* menu;
     SDL_Texture* gameOver;

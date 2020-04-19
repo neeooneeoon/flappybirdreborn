@@ -12,17 +12,14 @@ public:
     void display(SDL_Renderer* renderer);
     void destroy();
 
-    SDL_Rect casualRect;
-    SDL_Rect pvpRect;
-    SDL_Rect dinosaurRect;
-    SDL_Rect quitRect;
+    SDL_Rect casualRect, versusRect, helpRect, quitRect;
 private:
     TTF_Font *font = NULL;
     SDL_Color color = {255,255,255};
     SDL_Surface *surface = NULL;
     SDL_Texture *casual = NULL;
-    SDL_Texture *pvp = NULL;
-    SDL_Texture *dinosaur = NULL;
+    SDL_Texture *versus = NULL;
+    SDL_Texture *help = NULL;
     SDL_Texture *quit = NULL;
 };
 

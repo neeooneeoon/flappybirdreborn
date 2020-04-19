@@ -29,7 +29,7 @@ private:
     NewHS newhs;
 
     unsigned char alphaVal = 100;
-    char* path = "sprites\\scoresheet.png";
+    const char* path = "sprites\\scoresheet.png";
     SDL_Surface *surface = NULL;
     SDL_Texture *texture = NULL;
     int anchor = 640; //step = 36; x

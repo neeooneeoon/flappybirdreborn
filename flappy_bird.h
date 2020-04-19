@@ -40,28 +40,30 @@ public:
 private:
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    string WINDOW_TITLE = "Flappy Bird Reborn - Build 180420";
+    string WINDOW_TITLE = "Flappy Bird Reborn - Build 200420";
 
     SDL_Window* window;
     SDL_Renderer* renderer;
     SDL_Event event;
 
-    bool lose = false;
+    bool gameLose = false;
+    bool gameReset = false;
     bool gameQuit = false;
-    bool realQuit = false;
     bool menuLoop = true;
     bool getReadyLoop = true;
     bool level2 = false;
     bool casual = false;
-
-    int mouseX;
-    int mouseY;
+    bool versus = false;
+    bool help = false;
 
     int randNum;
     int delay = 60;
+    int multiplier = 1;
+    int threshold = 4;
+    int frameNum = 1;
 
-    Config config;
-    Saves saves;
+    int mouseX;
+    int mouseY;
 
     Bird bird;
     Background background;
@@ -72,15 +74,17 @@ private:
     Text text;
     Indicator indicator;
 
+    Scoreboard scoreboard;
+    int score = 0;
+    bool scoreStatus[7];
+
     Pipe pipe[7];
 
     Coin coin[7];
     bool coinStatus[7];
     int coinRandom[7];
 
-    Scoreboard scoreboard;
-    int score = 0;
-    bool scoreStatus[7];
+    Saves saves;
 };
 
 #endif // FLAPPY_BIRD_H

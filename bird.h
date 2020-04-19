@@ -19,11 +19,11 @@ public:
     void update();
     void keyUpdate();
     void aniUpdate();
-    void status(bool &close);
+    void statusUpdate(bool &close);
     void collideBase(SDL_Rect rect1, SDL_Rect rect2, bool &lose);
     void destroy();
 private:
-    char* path = "sprites\\yellowBird.png";
+    const char* path = "sprites\\yellowBird.png";
     SDL_Texture *texture = NULL;
     SDL_Surface *surface = NULL;
     SDL_Rect srcrect;

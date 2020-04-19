@@ -65,7 +65,7 @@ void quitSDL(SDL_Window* &window, SDL_Renderer* &renderer)
     SDL_Quit();
 }
 
-void loadSprites(SDL_Surface* &surface, SDL_Texture* &texture, SDL_Renderer* &renderer, char* path)
+void loadSprites(SDL_Surface* &surface, SDL_Texture* &texture, SDL_Renderer* &renderer, const char* path)
 {
     surface = IMG_Load(path);
     texture = SDL_CreateTextureFromSurface(renderer, surface);

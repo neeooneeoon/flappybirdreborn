@@ -24,7 +24,8 @@ void Indicator::select(bool up)
     if(up==true && selected>1)
     {
         selected--;
-    }else if(up==false && selected<4)
+    }
+    else if(up==false && selected<4)
     {
         selected++;
     }
@@ -35,10 +36,10 @@ void Indicator::select(bool up)
         setPosCasual();
         break;
     case 2:
-        setPosPvP();
+        setPosVersus();
         break;
     case 3:
-        setPosDinosaur();
+        setPosHelp();
         break;
     case 4:
         setPosQuit();
@@ -81,21 +82,25 @@ void Indicator::aniUpdate()
 void Indicator::setPosCasual()
 {
     dstrect = {1160, 76, 34/2, 24/2};
+    selected = 1;
 }
 
-void Indicator::setPosPvP()
+void Indicator::setPosVersus()
 {
-    dstrect = {1180, 96, 34/2, 24/2};
+    dstrect = {1160, 96, 34/2, 24/2};
+    selected = 2;
 }
 
-void Indicator::setPosDinosaur()
+void Indicator::setPosHelp()
 {
-    dstrect = {1140, 116, 34/2, 24/2};
+    dstrect = {1185, 116, 34/2, 24/2};
+    selected = 3;
 }
 
 void Indicator::setPosQuit()
 {
     dstrect = {1185, 136, 34/2, 24/2};
+    selected = 4;
 }
 
 void Indicator::destroy()

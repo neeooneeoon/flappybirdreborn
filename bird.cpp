@@ -39,7 +39,7 @@ void Bird::display(SDL_Renderer* renderer)
     SDL_RenderCopyEx(renderer, texture, &srcrect, &dstrect, angle, center, flip);
 }
 
-void Bird::status(bool &close)
+void Bird::statusUpdate(bool &close)
 {
     if(hold>0)
     {

@@ -21,7 +21,7 @@ public:
 private:
     SDL_Surface* surface;
     SDL_Texture* texture;
-    char* path = "sprites\\coin.png";
+    const char* path = "sprites\\coin.png";
 
     int delay = 5;
     int status = 1;

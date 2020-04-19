@@ -1,7 +1,7 @@
 #ifndef FLASH_H
 #define FLASH_H
 
-#include "sdl_engine.h";
+#include "sdl_engine.h"
 
 using namespace std;
 
@@ -17,7 +17,7 @@ public:
 private:
     SDL_Texture *texture = NULL;
     SDL_Surface *surface = NULL;
-    char* path = "sprites\\white.png";
+    const char* path = "sprites\\white.png";
     SDL_Rect rect;
 };
 

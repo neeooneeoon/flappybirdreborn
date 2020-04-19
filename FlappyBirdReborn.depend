@@ -148,41 +148,39 @@
 1587109818 source:h:\flappybirdreborn\background.cpp
 	"background.h"
 
-1587109818 h:\flappybirdreborn\background.h
+1587312788 h:\flappybirdreborn\background.h
 	"sdl_engine.h"
-	"config.h"
 	<stdlib.h>
 	<time.h>
 
-1587206266 h:\flappybirdreborn\sdl_engine.h
+1587312564 h:\flappybirdreborn\sdl_engine.h
 	<iostream>
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_TTF.h>
 	<SDL_mixer.h>
 
-1587116050 h:\flappybirdreborn\config.h
+1587307984 h:\flappybirdreborn\config.h
 
 1587109818 source:h:\flappybirdreborn\base.cpp
 	"base.h"
 
-1587109818 h:\flappybirdreborn\base.h
+1587312788 h:\flappybirdreborn\base.h
 	"sdl_engine.h"
-	"config.h"
 	"bird.h"
 
-1587192040 h:\flappybirdreborn\bird.h
+1587312788 h:\flappybirdreborn\bird.h
 	"sdl_engine.h"
 	<stdlib.h>
 	<time.h>
 
-1587199820 source:h:\flappybirdreborn\bird.cpp
+1587311164 source:h:\flappybirdreborn\bird.cpp
 	"bird.h"
 
 1587109818 source:h:\flappybirdreborn\coin.cpp
 	"coin.h"
 
-1587109818 h:\flappybirdreborn\coin.h
+1587312788 h:\flappybirdreborn\coin.h
 	<stdlib.h>
 	<time.h>
 	"sdl_engine.h"
@@ -208,12 +206,12 @@
 	"sfx.h"
 	"flash.h"
 
-1587112944 h:\flappybirdreborn\pipe.h
+1587312622 h:\flappybirdreborn\pipe.h
 	"sdl_engine.h"
 	<stdlib.h>
 	<time.h>
 
-1587294476 h:\flappybirdreborn\scoreboard.h
+1587312788 h:\flappybirdreborn\scoreboard.h
 	"sdl_engine.h"
 	"medal.h"
 	"newhs.h"
@@ -221,19 +219,19 @@
 	<string>
 	<cmath>
 
-1587139128 h:\flappybirdreborn\message.h
+1587312788 h:\flappybirdreborn\message.h
 	"sdl_engine.h"
 
 1587225632 h:\flappybirdreborn\sfx.h
 	"sdl_engine.h"
 
-1587206728 h:\flappybirdreborn\flash.h
+1587312576 h:\flappybirdreborn\flash.h
 	"sdl_engine.h"
 
-1587293652 source:h:\flappybirdreborn\flappy_bird.cpp
+1587312476 source:h:\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
-1587295044 h:\flappybirdreborn\flappy_bird.h
+1587312832 h:\flappybirdreborn\flappy_bird.h
 	<string>
 	<stdlib.h>
 	<time.h>
@@ -257,9 +255,8 @@
 
 1587109818 source:h:\flappybirdreborn\icon.rc
 
-1587138126 source:h:\flappybirdreborn\main.cpp
+1587309248 source:h:\flappybirdreborn\main.cpp
 	"flappy_bird.h"
-	"dinosaur.h"
 
 1587109818 source:h:\flappybirdreborn\menu.cpp
 	"menu.h"
@@ -273,25 +270,25 @@
 1587112934 source:h:\flappybirdreborn\pipe.cpp
 	"pipe.h"
 
-1587294536 source:h:\flappybirdreborn\scoreboard.cpp
+1587312820 source:h:\flappybirdreborn\scoreboard.cpp
 	"scoreboard.h"
 
-1587206258 source:h:\flappybirdreborn\sdl_engine.cpp
+1587312568 source:h:\flappybirdreborn\sdl_engine.cpp
 	"sdl_engine.h"
 
 1587225706 source:h:\flappybirdreborn\sfx.cpp
 	"sfx.h"
 
-1587203646 h:\flappybirdreborn\text.h
+1587303846 h:\flappybirdreborn\text.h
 	"sdl_engine.h"
 
-1587203084 source:h:\flappybirdreborn\text.cpp
+1587303894 source:h:\flappybirdreborn\text.cpp
 	"text.h"
 
-1587220860 h:\flappybirdreborn\indicator.h
+1587312542 h:\flappybirdreborn\indicator.h
 	"sdl_engine.h"
 
-1587219234 source:h:\flappybirdreborn\indicator.cpp
+1587309100 source:h:\flappybirdreborn\indicator.cpp
 	"indicator.h"
 
 1587294656 source:h:\flappybirdreborn\medal.cpp
@@ -303,10 +300,10 @@
 1587284750 h:\flappybirdreborn\saves.h
 	<fstream>
 
-1587293796 h:\flappybirdreborn\medal.h
+1587312788 h:\flappybirdreborn\medal.h
 	"sdl_engine.h"
 
-1587294482 h:\flappybirdreborn\newhs.h
+1587312788 h:\flappybirdreborn\newhs.h
 	"sdl_engine.h"
 
 1587294448 source:h:\flappybirdreborn\newhs.cpp

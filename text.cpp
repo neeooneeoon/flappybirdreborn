@@ -13,33 +13,33 @@ void Text::init(SDL_Renderer* renderer)
     casualRect.x = 1182;
     casualRect.y = 75;
 
-    surface = TTF_RenderText_Solid(font, "PvP", color);
-    pvp = SDL_CreateTextureFromSurface(renderer, surface);
+    surface = TTF_RenderText_Solid(font, "Versus", color);
+    versus = SDL_CreateTextureFromSurface(renderer, surface);
     SDL_FreeSurface(surface);
-    SDL_QueryTexture(pvp, NULL, NULL, &pvpRect.w, &pvpRect.h);
-    pvpRect.x = 1205;
-    pvpRect.y = 95;
+    SDL_QueryTexture(versus, NULL, NULL, &versusRect.w, &versusRect.h);
+    versusRect.x = 1183;
+    versusRect.y = 95;
 
-    surface = TTF_RenderText_Solid(font, "Dinosaur", color);
-    dinosaur = SDL_CreateTextureFromSurface(renderer, surface);
+    surface = TTF_RenderText_Solid(font, "Help", color);
+    help = SDL_CreateTextureFromSurface(renderer, surface);
     SDL_FreeSurface(surface);
-    SDL_QueryTexture(dinosaur, NULL, NULL, &dinosaurRect.w, &dinosaurRect.h);
-    dinosaurRect.x = 1165;
-    dinosaurRect.y = 115;
+    SDL_QueryTexture(help, NULL, NULL, &helpRect.w, &helpRect.h);
+    helpRect.x = 1210;
+    helpRect.y = 115;
 
     surface = TTF_RenderText_Solid(font, "Quit", color);
     quit = SDL_CreateTextureFromSurface(renderer, surface);
     SDL_FreeSurface(surface);
     SDL_QueryTexture(quit, NULL, NULL, &quitRect.w, &quitRect.h);
-    quitRect.x = 1210;
+    quitRect.x = 1211;
     quitRect.y = 135;
 }
 
 void Text::display(SDL_Renderer* renderer)
 {
     SDL_RenderCopy(renderer, casual, NULL, &casualRect);
-    SDL_RenderCopy(renderer, pvp, NULL, &pvpRect);
-    SDL_RenderCopy(renderer, dinosaur, NULL, &dinosaurRect);
+    SDL_RenderCopy(renderer, versus, NULL, &versusRect);
+    SDL_RenderCopy(renderer, help, NULL, &helpRect);
     SDL_RenderCopy(renderer, quit, NULL, &quitRect);
 }
 

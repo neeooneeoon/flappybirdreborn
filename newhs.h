@@ -12,7 +12,7 @@ public:
     void display(SDL_Renderer* renderer);
     void destroy();
 private:
-    char* path = "sprites\\new.png";
+    const char* path = "sprites\\new.png";
     SDL_Surface *surface;
     SDL_Texture *texture;
     SDL_Rect rect;
