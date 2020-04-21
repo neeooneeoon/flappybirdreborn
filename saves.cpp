@@ -11,19 +11,32 @@ void Saves::read()
     }
     savefile.close();
 
-    savefile.open("saves\\pvp.txt");
+    savefile.open("saves\\versus.txt");
     if(savefile.is_open())
     {
-        savefile >> highscorePvP;
+        savefile >> highscoreVersus;
     }
     savefile.close();
+}
 
-    savefile.open("saves\\dinosaur.txt");
-    if(savefile.is_open())
+bool Saves::compareCasual(int score)
+{
+    if (highscoreCasual<score)
     {
-        savefile >> highscoreDinosaur;
+        highscoreCasual = score;
+        return true;
     }
-    savefile.close();
+    return false;
+}
+
+bool Saves::compareVersus(int score)
+{
+    if (highscoreVersus<score)
+    {
+        highscoreVersus = score;
+        return true;
+    }
+    return false;
 }
 
 void Saves::write()
@@ -32,11 +45,7 @@ void Saves::write()
     savefile << highscoreCasual;
     savefile.close();
 
-    savefile.open("saves\\pvp.txt", ios::out | ios::trunc);
-    savefile << highscorePvP;
-    savefile.close();
-
-    savefile.open("saves\\dinosaur.txt", ios::out | ios::trunc);
-    savefile << highscoreDinosaur;
+    savefile.open("saves\\versus.txt", ios::out | ios::trunc);
+    savefile << highscoreVersus;
     savefile.close();
 }

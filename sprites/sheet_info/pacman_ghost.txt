@@ -1,0 +1,16 @@
+pacman_ghost_cyan_1 = 0 0 187 182
+pacman_ghost_cyan_2 = 188 0 187 182
+pacman_ghost_cyan_3 = 0 183 187 182
+pacman_ghost_cyan_4 = 188 183 187 182
+pacman_ghost_orange_1 = 376 0 187 182
+pacman_ghost_orange_2 = 376 183 187 182
+pacman_ghost_orange_3 = 564 0 187 182
+pacman_ghost_orange_4 = 564 183 187 182
+pacman_ghost_pink_1 = 0 366 187 182
+pacman_ghost_pink_2 = 0 549 187 182
+pacman_ghost_pink_3 = 188 366 187 182
+pacman_ghost_pink_4 = 188 549 187 182
+pacman_ghost_red_1 = 376 366 187 182
+pacman_ghost_red_2 = 376 549 187 182
+pacman_ghost_red_3 = 564 366 187 182
+pacman_ghost_red_4 = 564 549 187 182

@@ -83,7 +83,7 @@ void Scoreboard::display(SDL_Renderer* renderer, int birdY)
         alphaVal = 255;
     }
     SDL_SetTextureAlphaMod(texture, alphaVal);
-    anchor = 640 - 12*(scoreStr.length()-1);
+    anchor = 630 - 12*(scoreStr.length()-1);
     for(unsigned int i=0; i<scoreStr.length(); i++)
     {
         getNum(scoreStr[i]);

@@ -15,11 +15,15 @@ public:
     void select();
     void loadPNG(SDL_Renderer* renderer);
     void initCasual();
+    void initVersus();
     void display(SDL_Renderer* renderer);
+    void versusDisplay(SDL_Renderer* renderer);
     void update();
     void keyUpdate();
+    void versusKeyUpdate();
     void aniUpdate();
     void statusUpdate(bool &close);
+    void versusstatusUpdate(bool &close);
     void collideBase(SDL_Rect rect1, SDL_Rect rect2, bool &lose);
     void destroy();
 private:
@@ -27,7 +31,6 @@ private:
     SDL_Texture *texture = NULL;
     SDL_Surface *surface = NULL;
     SDL_Rect srcrect;
-    double sizeMultiplier = 1.2;
     int flapStatus = 2; //1-up 2-mid 3-down
     bool flapReversed = false;
     int speed = 500;

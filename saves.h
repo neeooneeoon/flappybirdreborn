@@ -9,11 +9,12 @@ class Saves
 {
 public:
     void read();
+    bool compareCasual(int score);
+    bool compareVersus(int score);
     void write();
 
     int highscoreCasual = 0;
-    int highscorePvP = 0;
-    int highscoreDinosaur = 0;
+    int highscoreVersus = 0;
 private:
     fstream savefile;
 };

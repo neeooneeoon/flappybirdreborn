@@ -7,15 +7,21 @@ void Coin::loadPNG(SDL_Renderer* renderer)
     loadSprites(surface, texture, renderer, path);
 }
 
-void Coin::getRandomLength(){
+void Coin::getRandomPos()
+{
     yPos = rand() % 500+50;
 }
 
-void Coin::init(SDL_Renderer* renderer, int pos)
+void Coin::init(int pos)
 {
-    getRandomLength();
+    getRandomPos();
     srcrect = {0,0,65,80};
-    dstrect = {1420+pos, yPos, 53/2, 80/2};
+    dstrect = {1420+pos, yPos, 36/2, 84/2};
+
+    status = 1;
+    delay = 5;
+    yPos = 150;
+    coinReverse = false;
 }
 
 void Coin::display(SDL_Renderer* renderer)
@@ -55,7 +61,8 @@ void Coin::display(SDL_Renderer* renderer)
             delay = 5;
             status = 4;
         }
-        else if(status == 3 && coinReverse == true){
+        else if(status == 3 && coinReverse == true)
+        {
             srcrect = {66,0,53,80};
             dstrect.w = 53/2;
             dstrect.h = 80/2;
@@ -80,7 +87,8 @@ void Coin::display(SDL_Renderer* renderer)
 
 }
 
-void Coin::updatePos(int multiplier){
+void Coin::updatePos(int multiplier)
+{
     dstrect.x -= 4 * multiplier;
 }
 

@@ -8,7 +8,7 @@ using namespace std;
 class Message{
 public:
     void init(SDL_Renderer* renderer);
-    void display(SDL_Renderer* renderer);
+    void display(SDL_Renderer* renderer, bool versus);
     void displayGameOver(SDL_Renderer* renderer);
     void displayMenu(SDL_Renderer* renderer);
     void destroy();

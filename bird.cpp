@@ -19,14 +19,23 @@ void Bird::loadPNG(SDL_Renderer* renderer)
     select();
     loadSprites(surface, texture, renderer, path);
     SDL_QueryTexture(texture, NULL, NULL, &dstrect.w, &dstrect.h);
-
 }
 
-void Bird::initCasual(){
+void Bird::initCasual()
+{
     srcrect = {0,25,34,24};
-    dstrect.w = 34*sizeMultiplier;
-    dstrect.h = 24*sizeMultiplier;
     dstrect = {(1280 - dstrect.w) /2, (720 - dstrect.h) /2, 34*2, 24*2};
+    speed = 500;
+    velocity = 0;
+    delay = 0;
+    angle = 0;
+    hold = 0;
+}
+
+void Bird::initVersus()
+{
+    srcrect = {0,25,34,24};
+    dstrect = {(1280 - dstrect.w)/2, (720 - dstrect.h) - 127, 34*2, 24*2};
     speed = 500;
     velocity = 0;
     delay = 0;
@@ -37,6 +46,11 @@ void Bird::initCasual(){
 void Bird::display(SDL_Renderer* renderer)
 {
     SDL_RenderCopyEx(renderer, texture, &srcrect, &dstrect, angle, center, flip);
+}
+
+void Bird::versusDisplay(SDL_Renderer* renderer)
+{
+    SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);
 }
 
 void Bird::statusUpdate(bool &close)
@@ -55,6 +69,27 @@ void Bird::statusUpdate(bool &close)
     {
         dstrect.y = 720 - dstrect.h;
         close = true;
+    }
+
+    // upper boundary check
+    if (dstrect.y < 0 && close==false)
+    {
+        dstrect.y = 0;
+        close = true;
+    }
+}
+
+void Bird::versusstatusUpdate(bool &close)
+{
+    if(hold>0)
+    {
+        hold--;
+    }
+
+    // bottom boundary check
+    if (dstrect.y + dstrect.h > 720 - 127 && close ==false)
+    {
+        dstrect.y = 720 - 127 - dstrect.h;
     }
 
     // upper boundary check
@@ -110,6 +145,13 @@ void Bird::keyUpdate()
     dstrect.y -= speed / 7;
     velocity = 9.8;
     angle = -20;
+    hold = 15;
+}
+
+void Bird::versusKeyUpdate()
+{
+    dstrect.y -= speed / 7;
+    velocity = 9.8;
     hold = 15;
 }
 

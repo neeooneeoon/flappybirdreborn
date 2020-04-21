@@ -8,11 +8,12 @@
 
 using namespace std;
 
-class Coin{
+class Coin
+{
 public:
     void loadPNG(SDL_Renderer* renderer);
-    void getRandomLength();
-    void init(SDL_Renderer* renderer, int pos);
+    void getRandomPos();
+    void init(int pos);
     void display(SDL_Renderer* renderer);
     void updatePos(int multiplier);
     void destroy();

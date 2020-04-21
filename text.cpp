@@ -33,6 +33,13 @@ void Text::init(SDL_Renderer* renderer)
     SDL_QueryTexture(quit, NULL, NULL, &quitRect.w, &quitRect.h);
     quitRect.x = 1211;
     quitRect.y = 135;
+
+    surface = TTF_RenderText_Solid(font, "Use [W], [Arrows], [Space], [Enter] to navigate and play the game", color);
+    helper = SDL_CreateTextureFromSurface(renderer, surface);
+    SDL_FreeSurface(surface);
+    SDL_QueryTexture(helper, NULL, NULL, &helperRect.w, &helperRect.h);
+    helperRect.x = 20;
+    helperRect.y = 105;
 }
 
 void Text::display(SDL_Renderer* renderer)
@@ -41,6 +48,11 @@ void Text::display(SDL_Renderer* renderer)
     SDL_RenderCopy(renderer, versus, NULL, &versusRect);
     SDL_RenderCopy(renderer, help, NULL, &helpRect);
     SDL_RenderCopy(renderer, quit, NULL, &quitRect);
+}
+
+void Text::helperDisplay(SDL_Renderer* renderer)
+{
+    SDL_RenderCopy(renderer, helper, NULL, &helperRect);
 }
 
 void Text::destroy()

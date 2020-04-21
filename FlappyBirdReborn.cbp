@@ -39,7 +39,6 @@
 		<Unit filename="bird.h" />
 		<Unit filename="coin.cpp" />
 		<Unit filename="coin.h" />
-		<Unit filename="dinosaur.h" />
 		<Unit filename="flappy_bird.cpp" />
 		<Unit filename="flappy_bird.h" />
 		<Unit filename="flash.cpp" />
@@ -56,6 +55,8 @@
 		<Unit filename="message.h" />
 		<Unit filename="newhs.cpp" />
 		<Unit filename="newhs.h" />
+		<Unit filename="pacman.cpp" />
+		<Unit filename="pacman.h" />
 		<Unit filename="pipe.cpp" />
 		<Unit filename="pipe.h" />
 		<Unit filename="saves.cpp" />

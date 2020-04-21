@@ -14,9 +14,12 @@ public:
     void loadGreen(SDL_Renderer* renderer);
     void loadRed(SDL_Renderer* renderer);
     void getRandomLength();
-    void init(SDL_Renderer* renderer, int pos);
+    void init(int pos);
+    void versusInit(int pos);
     void display(SDL_Renderer* renderer);
+    void versusDisplay(SDL_Renderer* renderer);
     void update(int multiplier);
+    void versusUpdate(int multiplier);
     void destroy();
 private:
     int randNum;

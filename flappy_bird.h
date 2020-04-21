@@ -19,6 +19,7 @@
 #include "text.h"
 #include "indicator.h"
 #include "saves.h"
+#include "pacman.h"
 
 using namespace std;
 
@@ -31,6 +32,8 @@ public:
     void menu();
     void getReady();
     void gameLoop();
+    void versusReady();
+    void gameVersus();
     void gameOver();
     void display();
     void resInit();
@@ -40,7 +43,7 @@ public:
 private:
     int SCREEN_WIDTH = 1280;
     int SCREEN_HEIGHT = 720;
-    string WINDOW_TITLE = "Flappy Bird Reborn - Build 200420";
+    string WINDOW_TITLE = "Flappy Bird Reborn - Build 220420";
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -50,7 +53,7 @@ private:
     bool gameReset = false;
     bool gameQuit = false;
     bool menuLoop = true;
-    bool getReadyLoop = true;
+    bool readyLoop = true;
     bool level2 = false;
     bool casual = false;
     bool versus = false;
@@ -66,6 +69,7 @@ private:
     int mouseY;
 
     Bird bird;
+
     Background background;
     Base base;
     SFX sfx;
@@ -76,9 +80,14 @@ private:
 
     Scoreboard scoreboard;
     int score = 0;
-    bool scoreStatus[7];
 
     Pipe pipe[7];
+    bool scoreStatus[7];
+
+    Pacman pacman[7];
+    bool pacmanStatus[7];
+    int pacmanRandom[7];
+    bool pacmanScore[7];
 
     Coin coin[7];
     bool coinStatus[7];
