@@ -33,6 +33,9 @@ void FlappyBird::quit()
 
 void FlappyBird::reset()
 {
+    if(versus == true)
+        pacman.destroy();
+
     multiplier = 1;
     score = 0;
     gameLose = false;
