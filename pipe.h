@@ -11,6 +11,9 @@ class Pipe{
 public:
     SDL_Rect dstrectUp;
     SDL_Rect dstrectDown;
+
+    int length = 50; //max 320
+
     void loadGreen(SDL_Renderer* renderer);
     void loadRed(SDL_Renderer* renderer);
     void getRandomLength();
@@ -29,7 +32,6 @@ private:
     SDL_Surface* surface;
     SDL_Rect srcrectUp;
     SDL_Rect srcrectDown;
-    int length = 50; //max 320
     int upAngle = 180;
     SDL_Point* center = NULL;
     SDL_RendererFlip flip = SDL_FLIP_NONE;

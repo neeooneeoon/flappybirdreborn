@@ -39,7 +39,7 @@
 	<time.h>
 	"sdl_engine.h"
 
-1587487626 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
+1587516843 source:c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.cpp
 	"flappy_bird.h"
 
 1587487626 c:\users\ngoc nguyen\desktop\flappybirdreborn\flappy_bird.h
@@ -62,7 +62,7 @@
 	"saves.h"
 	"pacman.h"
 
-1587487626 c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.h
+1587516825 c:\users\ngoc nguyen\desktop\flappybirdreborn\pipe.h
 	"sdl_engine.h"
 	<stdlib.h>
 	<time.h>
@@ -337,7 +337,7 @@
 1587487626 c:\users\ngoc nguyen\desktop\flappybirdreborn\saves.h
 	<fstream>
 
-1587487626 c:\users\ngoc nguyen\desktop\flappybirdreborn\pacman.h
+1587516759 c:\users\ngoc nguyen\desktop\flappybirdreborn\pacman.h
 	<stdlib.h>
 	<time.h>
 	"sdl_engine.h"

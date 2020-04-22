@@ -12,7 +12,7 @@ class Pacman
 {
 public:
     void loadPacman(SDL_Renderer *renderer);
-    void init(int pos);
+    void init(int pos, int yPipe);
     void aniUpdate();
     void update(int multiplier);
     void display(SDL_Renderer *renderer);

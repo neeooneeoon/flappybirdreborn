@@ -33,9 +33,6 @@ void FlappyBird::quit()
 
 void FlappyBird::reset()
 {
-    if(versus == true)
-        pacman.destroy();
-
     multiplier = 1;
     score = 0;
     gameLose = false;
@@ -580,7 +577,7 @@ void FlappyBird::resInit()
         if(versus == true)
         {
             pacman[i].loadPacman(renderer);
-            pacman[i].init(i*250);
+            pacman[i].init(i*250, pipe[i].length);
             pacmanStatus[i] = true;
             pacmanRandom[i] = rand() % 2;
             pacmanScore[i] = false;
@@ -657,9 +654,9 @@ void FlappyBird::resGen()
             if(versus == true)
             {
                 //Generators && Score updater
-                if(pacman[i].dstrect.x<-60)
+                if(pacman[i].dstrect.x<-60) //|| collisionCheck(pacman[i].dstrect, coin[i].dstrect)==false)
                 {
-                    pacman[i].init(10);
+                    pacman[i].init(10, pipe[i].length);
                     pacmanStatus[i] = true;
                     pacmanRandom[i] = rand() % 2;
                     pacmanScore[i] = false;
@@ -667,6 +664,7 @@ void FlappyBird::resGen()
                 if(collisionCheck(bird.dstrect, pacman[i].dstrect) && pacmanStatus[i]==true && pacmanRandom[i]==1)
                 {
                     gameLose = true;
+                    cout << "ok" << endl;
                 }
                 if(bird.dstrect.x > pacman[i].dstrect.x && pacmanStatus[i]==true && pacmanRandom[i]==1 && pacmanScore[i]==false)
                 {
@@ -677,8 +675,7 @@ void FlappyBird::resGen()
                 }
                 //Display Pacman(s)
                 pacman[i].update(multiplier);
-                if(pacmanStatus[i]==true && pacmanRandom[i]==1
-                   && collisionCheck(pacman[i].dstrect, coin[i].dstrect)==false)
+                if(pacmanStatus[i]==true && pacmanRandom[i]==1)
                     pacman[i].display(renderer);
             }
 
@@ -692,7 +689,8 @@ void FlappyBird::resDestroy()
     {
         pipe[i].destroy();
         coin[i].destroy();
-        pacman[i].destroy();
+        if(versus == true)
+            pacman[i].destroy();
     }
 }
 

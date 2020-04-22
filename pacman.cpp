@@ -7,7 +7,7 @@ void Pacman::loadPacman(SDL_Renderer *renderer)
     loadSprites(surface, texture, renderer, path);
 }
 
-void Pacman::init(int pos)
+void Pacman::init(int pos, int yPipe)
 {
     randGhost = rand() % 4 + 1;
     switch(randGhost)
@@ -26,7 +26,7 @@ void Pacman::init(int pos)
         break;
     }
 
-    yPos = rand() % 500 + 50;
+    yPos = rand() % 300 + 50 - yPipe/2;
     dstrect = {1420+pos, yPos, 187/4, 182/4};
 
     delay = 15;
